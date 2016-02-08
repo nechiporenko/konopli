@@ -1,0 +1,150 @@
+﻿@import "../../modules/base";
+/** BX Slider **/
+
+$loader:   '../img/loader.gif';
+
+//layout
+.bx-wrapper {
+	position: relative;
+    margin:0 auto;
+	padding: 0;
+	-ms-touch-action: pan-y;
+	touch-action: pan-y;
+}
+
+
+
+.bx-viewport {
+	//fix other elements on the page moving (on Chrome)
+	-webkit-transform: translatez(0);
+}
+
+// THEME
+
+.bx-wrapper {
+	.bx-pager,
+	.bx-controls-auto {
+		position: absolute;
+        bottom:0;
+		width: 100%;
+	}
+
+    .bx-pager{
+        &:before{
+            content:'';
+            display:block;
+            width:240px;
+            height:1px;
+            background:#9cad9f;
+            opacity:.5;
+            position:absolute;
+            left:50%;
+            bottom:8px;
+            margin-left:-120px;
+            z-index:-1;
+        }
+    }
+}
+
+// LOADER
+.bx-wrapper .bx-loading {
+	min-height: 50px;
+	background: url($loader) center center no-repeat #fff;
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 2000;
+}
+
+// PAGER
+.bx-wrapper {
+	.bx-pager {
+		text-align: center;
+		font-size: .85em;
+		font-family: Arial;
+		font-weight: bold;
+		color: #9cad9f;
+
+		&.bx-default-pager a {
+			background: #9cad9f;
+			@include hide-text;
+			display: block;
+			width: 10px;
+			height: 10px;
+			margin: 0 10px;
+			outline: 0;
+			border-radius: 5px;
+			&:hover,
+			&.active{
+				background:#fff;
+			}
+		}
+	}
+	.bx-pager-item,
+	.bx-controls-auto .bx-controls-auto-item {
+		display: inline-block;
+	}
+	.bx-pager-item {
+		font-size: 0;
+		line-height: 0;
+	}
+}
+
+// DIRECTION CONTROLS (NEXT / PREV)
+.bx-wrapper {
+	.bx-prev {
+		left: -25px;
+		background:url(../img/slider/arrow-left.svg) no-repeat;
+	}
+	.bx-next {
+		right: -25px;
+		background:url(../img/slider/arrow-right.svg) no-repeat;
+	}
+	.bx-controls-direction a {
+		position: absolute;
+		top: 50%;
+		margin-top: -18px;
+		outline: 0;
+		width: 20px;
+		height: 36px;
+		@include hide-text;
+		z-index: 100;
+        opacity:.75;
+        @include transition(opacity .3s ease);
+
+        &:hover,
+        &:active,
+        &:focus{
+            opacity:1;
+        }
+
+		&.disabled {
+			opacity:.3;
+            cursor:default;
+		}
+	}
+}
+
+.no-svg{
+    .bx-wrapper{
+        .bx-prev{
+            background:url(../img/slider/arrow-left.png) no-repeat;
+        }
+        .bx-next{
+            background:url(../img/slider/arrow-right.png) no-repeat;
+        }
+    }
+}
+
+@include media($large){
+    .bx-wrapper{
+        .bx-prev{
+            left:-40px;
+        }
+        .bx-next{
+            right:-40px;
+        }
+    }
+}

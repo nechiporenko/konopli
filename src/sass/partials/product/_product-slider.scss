@@ -1,0 +1,18 @@
+﻿@import "../../modules/_base.scss";
+/*PRoduct Slider*/
+.product-slider{
+    margin:-5px auto 0;
+}
+.product-slider__list{
+    list-style-type:none;
+    padding:0;
+    margin:0;
+}
+.product-slider__item{
+    float:left;
+    padding:5px 0 0;
+
+    .b-product{
+        margin-bottom:0;
+    }
+}

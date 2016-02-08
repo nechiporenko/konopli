@@ -1,0 +1,22 @@
+﻿@import "../../modules/_base.scss";
+/*Header top panel*/
+.header__panel{
+    display:none;
+    padding:0 0 15px;
+    background:#fff;
+    position:absolute;
+    top:-400%; left:0;
+    width:100%;
+    z-index:1900;//под хидером
+    will-change:top;
+    @include transition-property(top);
+    @include transition-duration(.5s);
+
+    @include media($desktop){
+        display:block;
+    }
+
+    &.active{
+        top:100%;
+    }
+}

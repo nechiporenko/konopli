@@ -1,0 +1,45 @@
+﻿@import "../../modules/_base.scss";
+/*News block*/
+.b-item{
+    text-align:center;
+}
+.b-item__link{
+    display:block;
+    max-width:300px;
+    margin:0 auto 25px;
+    position:relative;
+
+    &:after{
+        content:'';
+        display:block;
+        padding-top:100%;
+    }
+}
+
+.b-item__img{
+    @extend .g-img-centered;
+    border:1px solid $border-color;
+    @include transition(opacity .3s ease);
+    @include backface-visibility(hidden);
+    &:hover,
+    &:active{
+        opacity:.85;
+    }
+}
+.b-item__description{
+    @include font-size(12px);
+}
+
+.b-item__title{
+    display:block;
+    margin-bottom:25px;
+    color:$title-color;
+    @include font-size(14px);
+    text-transform:uppercase;
+    text-decoration:none !important;
+    font-family:$font-bold;
+    line-height:1.1;
+}
+.b-item__subtitle{
+    margin:0;
+}

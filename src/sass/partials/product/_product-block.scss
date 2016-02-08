@@ -1,0 +1,65 @@
+﻿@import "../../modules/_base.scss";
+/*PRoduct Block*/
+.b-product{
+    max-width:220px;
+    padding:10px;
+    margin:0 auto $project-line-height;
+    border:1px solid $border-color;
+    text-align:center;
+    line-height:1;
+    @include transition-property(border-color, transform);
+    @include transition-duration(.3s);
+
+    &:hover,
+    &:active{
+        border-color:$primary;
+        @include transform(translateY(-4px));
+    }
+}
+
+.b-product__link{
+    display:block;
+    position:relative;
+
+    &:after{
+        content:'';
+        display:block;
+        padding-top:100%;
+    }
+}
+.b-product__img{
+    @extend .g-img-centered;
+}
+.b-product__title{
+    display:block;
+    height:51px;
+    overflow:hidden;
+    margin:7px 0 15px;
+    color:$title-color;
+    @include font-size(14px);
+    text-transform:uppercase;
+    text-decoration:none !important;
+    line-height:1.25;
+
+    &:hover,
+    &:active,
+    &:focus{
+        color:$title-color;
+    }
+}
+.b-product__price{
+    display:block;
+    margin:15px 0;
+    @include font-size(24px);
+    color:$title-color;
+    white-space:nowrap;
+}
+.b-product__curr{
+    @include font-size(12px);
+    text-transform:uppercase;
+}
+
+.b-product__btn{
+    @extend .g-btn;
+    margin-bottom:10px;
+}

@@ -1,0 +1,80 @@
+﻿@import "../../modules/_base.scss";
+/*Mobile Menu*/
+.m-panel{
+    position:fixed;
+    @include px2rem(width, 256px);
+    height:100%;
+    top:0;
+    @include px2rem(left, -256px);
+    z-index:2100;//поверх хидера
+    overflow-x:hidden;
+    overflow-y:auto;
+    @include transition(transform .3s ease);
+    @include linear-gradient(to bottom, #222, #444);
+
+    @include media($tablet){
+        display:none;
+    }
+
+    &.active{
+        @include transform(translateX(100%));
+    }
+}
+
+.no-csstransforms{
+    .m-panel.active{
+        left:0;
+    }
+}
+
+.m-menu{
+    @extend .g-clearlist;
+    font-family:$font-light;
+}
+.m-menu__link{
+    display:block;
+    @include px2rem(padding, 8px 12px);
+    border-top:1px solid #808080;
+    border-bottom:1px solid #000;
+    @include font-size(14px);
+    line-height:1.1;
+    color:#fff;
+    text-decoration:none !important;
+    text-transform:uppercase;
+
+    &:hover,
+    &:active,
+    &:focus,
+    &.current{
+        color:$primary;
+    }
+}
+
+.m-menu__label{
+    display:block;
+    @include px2rem(height, 53px);
+    @include px2rem(line-height, 53px);
+    @include px2rem(padding, 0 30px 0 12px);
+    margin:0;
+    border-bottom:1px solid #000;
+    @include font-size(16px);
+    color:$border-color;
+    text-transform:uppercase;
+    cursor:pointer;
+    outline:0;
+    font-weight:300;
+    position:relative;
+
+    .glyphicon{
+        position:absolute;
+        right:8px;
+        top:50%;
+        margin-top:-8px;
+    }
+}
+
+.m-menu__divider{
+    display:block;
+    border-top:1px solid #000;
+    border-bottom:1px solid #808080;
+}

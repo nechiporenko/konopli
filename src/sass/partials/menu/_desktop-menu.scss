@@ -1,0 +1,173 @@
+﻿@import "../../modules/_base.scss";
+/* Desktop Menu */
+.menu{
+    list-style-type:none;
+    padding:7px 0;
+    margin:0;
+    float:right;
+    font-size:0;
+}
+.menu__item{
+    display:none;
+    @include font-size(14px);
+
+    @include media($desktop){
+        display:inline-block;
+    }
+}
+
+.menu__item--show-xs{
+    display:inline-block;
+}
+
+.menu__item--hide-md{
+    display:inline-block;
+    @include media($desktop){
+        display:none;
+    }
+}
+.menu__link{
+    display:inline-block;
+    vertical-align:middle;
+    padding:8px 17px;
+    text-transform:uppercase;
+    text-decoration:none !important;
+    color:$title-color;
+    position:relative;
+    font-family:$font-light;
+    font-weight:300;
+
+    &:before{
+        content:'';
+        display:none;
+        height:2px;
+        background:$primary;
+        position:absolute;
+        left:15px; right:15px;
+        top:2px;
+    }
+
+    &:hover,
+    &:active,
+    &:focus,
+    &.current{
+        color:$primary;
+    }
+
+    &.current{
+        &:before{
+            display:block;
+        }
+    }
+}
+
+/*Menu Button*/
+.menu__icon{
+    display:block;
+    @include px2rem(width, 28px);
+    @include px2rem(height, 14px);
+    background-image: url('data:image/svg+xml;charset=US-ASCII,%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22UTF-8%22%20standalone%3D%22no%22%3F%3E%0A%3C%21--%20Created%20with%20Inkscape%20%28http%3A//www.inkscape.org/%29%20--%3E%0A%3Csvg%20id%3D%22Capa_1%22%20xmlns%3Ardf%3D%22http%3A//www.w3.org/1999/02/22-rdf-syntax-ns%23%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20xml%3Aspace%3D%22preserve%22%20height%3D%2214%22%20width%3D%2228%22%20version%3D%221.1%22%20xmlns%3Acc%3D%22http%3A//creativecommons.org/ns%23%22%20viewBox%3D%220%200%2027.999998%2013.999999%22%20xmlns%3Adc%3D%22http%3A//purl.org/dc/elements/1.1/%22%3E%3Cmetadata%20id%3D%22metadata47%22%3E%3Crdf%3ARDF%3E%3Ccc%3AWork%20rdf%3Aabout%3D%22%22%3E%3Cdc%3Aformat%3Eimage/svg+xml%3C/dc%3Aformat%3E%3Cdc%3Atype%20rdf%3Aresource%3D%22http%3A//purl.org/dc/dcmitype/StillImage%22/%3E%3Cdc%3Atitle/%3E%3C/cc%3AWork%3E%3C/rdf%3ARDF%3E%3C/metadata%3E%0A%3Cg%20id%3D%22g3%22%20fill%3D%22%23363636%22%20transform%3D%22matrix%28.045752%200%200%20.041939%20-4.3864e-7%20-5.8334%29%22%3E%0A%09%3Cg%20id%3D%22g5%22%20fill%3D%22%23363636%22%3E%0A%09%09%3Cpath%20id%3D%22path7%22%20d%3D%22m604.27%20194.73c4.257%200%207.733-3.644%207.733-7.733v-40.169c0-4.256-3.283-7.733-7.733-7.733h-596.54c-4.253-0.01-7.73%203.64-7.73%207.72v40.169c0%204.256%203.283%207.733%207.733%207.733h596.53z%22/%3E%0A%09%09%3Cpath%20id%3D%22path9%22%20d%3D%22m0%20326.08c0%204.256%203.283%207.733%207.733%207.733h596.53c4.256%200%207.733-3.645%207.733-7.733v-40.169c0-4.284-3.283-7.733-7.733-7.733h-596.53c-4.253%200-7.73%203.65-7.73%207.74v40.169z%22/%3E%0A%09%09%3Cpath%20id%3D%22path11%22%20d%3D%22m0%20465.18c0%204.256%203.283%207.733%207.733%207.733h596.53c4.256%200%207.733-3.645%207.733-7.733v-40.169c0-4.256-3.283-7.732-7.733-7.732h-596.53c-4.253-0.01-7.73%203.64-7.73%207.73v40.169z%22/%3E%0A%09%3C/g%3E%0A%3C/g%3E%0A%3C/svg%3E%0A');
+	background-repeat: no-repeat;
+
+    @include transition(background-image .15s ease-in);
+}
+
+.menu__btn{
+    border:none;
+    background:none;
+    display:inline-block;
+    @include px2rem(height, 30px);
+    @include px2rem(line-height, 30px);
+    padding:0 0 0 17px;
+    vertical-align:middle;
+    @include transition(transform .3s ease-in);
+    @include transform-origin(70% 50%);
+
+    &:hover,
+    &:active,
+    &:focus{
+        outline:0;
+        .menu__icon{
+            background-image: url('data:image/svg+xml;charset=US-ASCII,%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22UTF-8%22%20standalone%3D%22no%22%3F%3E%0A%3C%21--%20Created%20with%20Inkscape%20%28http%3A//www.inkscape.org/%29%20--%3E%0A%3Csvg%20id%3D%22Capa_1%22%20xmlns%3Ardf%3D%22http%3A//www.w3.org/1999/02/22-rdf-syntax-ns%23%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20xml%3Aspace%3D%22preserve%22%20height%3D%2214%22%20width%3D%2228%22%20version%3D%221.1%22%20xmlns%3Acc%3D%22http%3A//creativecommons.org/ns%23%22%20viewBox%3D%220%200%2027.999998%2013.999999%22%20xmlns%3Adc%3D%22http%3A//purl.org/dc/elements/1.1/%22%3E%3Cmetadata%20id%3D%22metadata47%22%3E%3Crdf%3ARDF%3E%3Ccc%3AWork%20rdf%3Aabout%3D%22%22%3E%3Cdc%3Aformat%3Eimage/svg+xml%3C/dc%3Aformat%3E%3Cdc%3Atype%20rdf%3Aresource%3D%22http%3A//purl.org/dc/dcmitype/StillImage%22/%3E%3Cdc%3Atitle/%3E%3C/cc%3AWork%3E%3C/rdf%3ARDF%3E%3C/metadata%3E%0A%3Cg%20id%3D%22g3%22%20fill%3D%22%233aaa35%22%20transform%3D%22matrix%28.045752%200%200%20.041939%20-4.3864e-7%20-5.8334%29%22%3E%0A%09%3Cg%20id%3D%22g5%22%20fill%3D%22%233aaa35%22%3E%0A%09%09%3Cpath%20id%3D%22path7%22%20d%3D%22m604.27%20194.73c4.257%200%207.733-3.644%207.733-7.733v-40.169c0-4.256-3.283-7.733-7.733-7.733h-596.54c-4.253-0.01-7.73%203.64-7.73%207.72v40.169c0%204.256%203.283%207.733%207.733%207.733h596.53z%22/%3E%0A%09%09%3Cpath%20id%3D%22path9%22%20d%3D%22m0%20326.08c0%204.256%203.283%207.733%207.733%207.733h596.53c4.256%200%207.733-3.645%207.733-7.733v-40.169c0-4.284-3.283-7.733-7.733-7.733h-596.53c-4.253%200-7.73%203.65-7.73%207.74v40.169z%22/%3E%0A%09%09%3Cpath%20id%3D%22path11%22%20d%3D%22m0%20465.18c0%204.256%203.283%207.733%207.733%207.733h596.53c4.256%200%207.733-3.645%207.733-7.733v-40.169c0-4.256-3.283-7.732-7.733-7.732h-596.53c-4.253-0.01-7.73%203.64-7.73%207.73v40.169z%22/%3E%0A%09%3C/g%3E%0A%3C/g%3E%0A%3C/svg%3E%0A');
+        }
+    }
+
+    &.active{
+        @include transform(rotate(-720deg));
+    }
+}
+
+
+.no-svg{
+    .menu__icon{
+        background-image:url(../img/fallback/menu.png);
+    }
+
+    .menu__btn{
+        &:hover,
+        &:active,
+        &:focus{
+            .menu__icon{
+                background-image:url(../img/fallback/menu-hover.png);
+            }
+        }
+    }
+}
+
+/*Lang Switcher*/
+.lang-switcher__current{
+    position:absolute;
+    right:10px;
+}
+
+.lang-switcher__link{
+    position:absolute;
+    left:10px;
+    display:none;
+}
+
+.lang-switcher{
+    display:inline-block;
+    @include px2rem(width, 60px);
+    @include px2rem(height, 30px);
+    vertical-align:middle;
+    @include px2rem(line-height, 30px);
+    margin:0;
+    position:relative;
+    background-image: url('data:image/svg+xml;charset=US-ASCII,%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22UTF-8%22%20standalone%3D%22no%22%3F%3E%0A%3C%21--%20Created%20with%20Inkscape%20%28http%3A//www.inkscape.org/%29%20--%3E%0A%3Csvg%20id%3D%22svg2%22%20xmlns%3Ardf%3D%22http%3A//www.w3.org/1999/02/22-rdf-syntax-ns%23%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20xml%3Aspace%3D%22preserve%22%20height%3D%2230%22%20width%3D%2259.998%22%20version%3D%221.1%22%20xmlns%3Acc%3D%22http%3A//creativecommons.org/ns%23%22%20xmlns%3Adc%3D%22http%3A//purl.org/dc/elements/1.1/%22%3E%3Cmetadata%20id%3D%22metadata8%22%3E%3Crdf%3ARDF%3E%3Ccc%3AWork%20rdf%3Aabout%3D%22%22%3E%3Cdc%3Aformat%3Eimage/svg+xml%3C/dc%3Aformat%3E%3Cdc%3Atype%20rdf%3Aresource%3D%22http%3A//purl.org/dc/dcmitype/StillImage%22/%3E%3Cdc%3Atitle/%3E%3C/cc%3AWork%3E%3C/rdf%3ARDF%3E%3C/metadata%3E%3Cdefs%20id%3D%22defs6%22%3E%3CclipPath%20id%3D%22clipPath16%22%3E%3Cpath%20id%3D%22path18%22%20d%3D%22m0%2029.661h59.32v-29.661h-59.32v29.661z%22/%3E%3C/clipPath%3E%3C/defs%3E%3Cg%20id%3D%22g10%22%20transform%3D%22matrix%281.25%200%200%20-1.25%20-.00025%2030%29%22%3E%3Cg%20id%3D%22g12%22%20opacity%3D%22.25%22%20transform%3D%22matrix%28.80915%200%200%20.80915%20.000038171%20.000019085%29%22%20fill%3D%22%23363636%22%3E%3Cg%20id%3D%22g14%22%20fill%3D%22%23363636%22%20clip-path%3D%22url%28%23clipPath16%29%22%3E%3Cg%20id%3D%22g20%22%20transform%3D%22translate%2814.83%2023.193%29%22%3E%3Cpath%20id%3D%22path22%22%20d%3D%22m0%200c-4.593%200-8.363-3.77-8.363-8.362%200-4.594%203.77-8.364%208.363-8.364%204.595%200%208.363%203.77%208.363%208.364%200%204.592-3.768%208.362-8.363%208.362%22%20fill%3D%22%23363636%22/%3E%3C/g%3E%3Cg%20id%3D%22g24%22%20transform%3D%22translate%2844.494%202.1191%29%22%3E%3Cpath%20id%3D%22path26%22%20d%3D%22m0%200h-7.263-15.137-7.26c-7.01%200-12.715%205.704-12.715%2012.714%200%207.007%205.705%2012.709%2012.715%2012.709h7.26%2015.137%207.263c7.008%200%2012.709-5.702%2012.709-12.709%200-7.01-5.701-12.714-12.709-12.714m0%2027.542h-29.66c-8.147%200-14.834-6.687-14.834-14.828%200-8.148%206.687-14.833%2014.834-14.833h29.66c8.146%200%2014.826%206.685%2014.826%2014.833%200%208.141-6.68%2014.828-14.826%2014.828%22%20fill%3D%22%23363636%22/%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E%0A');
+	background-repeat: no-repeat;
+    text-decoration:none !important;
+    text-transform:uppercase;
+    color:$text-color;
+    @include transition(background-image .1s ease);
+
+    &:hover,
+    &:active{
+        color:$primary;
+        background-image: url('data:image/svg+xml;charset=US-ASCII,%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22UTF-8%22%20standalone%3D%22no%22%3F%3E%0A%3C%21--%20Created%20with%20Inkscape%20%28http%3A//www.inkscape.org/%29%20--%3E%0A%3Csvg%20id%3D%22svg2%22%20xmlns%3Ardf%3D%22http%3A//www.w3.org/1999/02/22-rdf-syntax-ns%23%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20xml%3Aspace%3D%22preserve%22%20height%3D%2230%22%20width%3D%2259.998%22%20version%3D%221.1%22%20xmlns%3Acc%3D%22http%3A//creativecommons.org/ns%23%22%20xmlns%3Adc%3D%22http%3A//purl.org/dc/elements/1.1/%22%3E%3Cmetadata%20id%3D%22metadata8%22%3E%3Crdf%3ARDF%3E%3Ccc%3AWork%20rdf%3Aabout%3D%22%22%3E%3Cdc%3Aformat%3Eimage/svg+xml%3C/dc%3Aformat%3E%3Cdc%3Atype%20rdf%3Aresource%3D%22http%3A//purl.org/dc/dcmitype/StillImage%22/%3E%3Cdc%3Atitle/%3E%3C/cc%3AWork%3E%3C/rdf%3ARDF%3E%3C/metadata%3E%3Cdefs%20id%3D%22defs6%22%3E%3CclipPath%20id%3D%22clipPath16%22%3E%3Cpath%20id%3D%22path18%22%20d%3D%22m0%2029.661h59.32v-29.661h-59.32v29.661z%22/%3E%3C/clipPath%3E%3C/defs%3E%3Cg%20id%3D%22g10%22%20transform%3D%22matrix%281.25%200%200%20-1.25%20-.00025%2030%29%22%3E%3Cg%20id%3D%22g12%22%20fill%3D%22%233aaa35%22%20transform%3D%22matrix%28-.80915%200%200%20-.80915%2047.999%2024%29%22%3E%3Cg%20id%3D%22g14%22%20fill%3D%22%233aaa35%22%20clip-path%3D%22url%28%23clipPath16%29%22%3E%3Cg%20id%3D%22g20%22%20transform%3D%22translate%2814.83%2023.193%29%22%3E%3Cpath%20id%3D%22path22%22%20d%3D%22m0%200c-4.593%200-8.363-3.77-8.363-8.362%200-4.594%203.77-8.364%208.363-8.364%204.595%200%208.363%203.77%208.363%208.364%200%204.592-3.768%208.362-8.363%208.362%22%20fill%3D%22%233aaa35%22/%3E%3C/g%3E%3Cg%20id%3D%22g24%22%20transform%3D%22translate%2844.494%202.1191%29%22%3E%3Cpath%20id%3D%22path26%22%20d%3D%22m0%200h-7.263-15.137-7.26c-7.01%200-12.715%205.704-12.715%2012.714%200%207.007%205.705%2012.709%2012.715%2012.709h7.26%2015.137%207.263c7.008%200%2012.709-5.702%2012.709-12.709%200-7.01-5.701-12.714-12.709-12.714m0%2027.542h-29.66c-8.147%200-14.834-6.687-14.834-14.828%200-8.148%206.687-14.833%2014.834-14.833h29.66c8.146%200%2014.826%206.685%2014.826%2014.833%200%208.141-6.68%2014.828-14.826%2014.828%22%20fill%3D%22%233aaa35%22/%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E%0A');
+
+        .lang-switcher__current{
+            display:none;
+        }
+        .lang-switcher__link{
+            display:block;
+        }
+    }
+
+    @include media($desktop){
+        margin:0 17px;
+    }
+}
+
+.no-svg{
+    .lang-switcher{
+        background-image:url(../img/fallback/lang.png);
+
+        &:hover,
+        &:active{
+            background-image:url(../img/fallback/lang-hover.png);
+        }
+    }
+}
+
+

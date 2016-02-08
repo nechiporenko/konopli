@@ -1,0 +1,16 @@
+﻿@import "../../modules/_base.scss";
+
+/*Site Logo*/
+.header__logo{
+    float:left;
+    @include px2rem(width, 138px);
+    @include px2rem(height, 44px);
+    @include hide-text;
+    background-image:url(../img/logo.png);
+    background-repeat:no-repeat;
+
+    @include hidpi(1.5){
+        background-image:url(../img/logo2x.png);
+        background-size:100% 100%;
+    }
+}

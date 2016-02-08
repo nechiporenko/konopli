@@ -1,0 +1,23 @@
+﻿@import "../../modules/_base.scss";
+/*Desktop submenu (top-panel menu)*/
+.h-menu{
+    @extend .g-clearlist;
+    font-size:0;
+    opacity:0;
+    @include transition(opacity 1s ease-in);
+}
+.h-menu__item{
+    display:inline-block;
+    width:25%;
+    @include font-size(14px);
+}
+
+.h-menu__link{
+    @extend .menu__link;
+}
+
+.header__panel.active{
+    .h-menu{
+        opacity:1;
+    }
+}

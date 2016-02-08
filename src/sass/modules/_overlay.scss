@@ -1,0 +1,16 @@
+﻿@import "base";
+
+/*Overlay*/
+.overlay{
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+    z-index:1800; //под хидером, подпанелью моб.меню
+    display:none; //покажем скриптом
+}
+
