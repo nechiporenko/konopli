@@ -1,0 +1,16 @@
+﻿@import "../../modules/_base.scss";
+/*Footer Menu*/
+.f-menu{
+    list-style-type:none;
+    padding:0;
+    margin-bottom:40px;
+}
+.f-menu__item{
+    @include font-size(12px);
+    line-height:3;
+}
+.f-menu__link{
+    color:$text-color;
+    text-decoration:none !important;
+    text-transform:uppercase;
+}

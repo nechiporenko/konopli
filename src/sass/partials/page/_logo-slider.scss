@@ -1,6 +1,8 @@
 ﻿@import "../../modules/_base.scss";
 /*Logo (Partners) Slider*/
-.logo-slider{}
+.logo-slider{
+    margin-bottom:10px;
+}
 .logo-slider__list{
     @extend .g-clearlist;
 }

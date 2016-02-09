@@ -1,3 +1,84 @@
 @import "../modules/base";
 
 /*Site Footer*/
+.footer{
+    padding:35px 0 20px;
+    background:#f4f5f5;
+    text-align:center;
+
+    @include media($tablet){
+        text-align:left;
+    }
+}
+
+.footer__title{
+    display:block;
+    margin-bottom:12px;
+    font-family:$font-bold;
+    @include font-size(18px);
+    text-transform:uppercase;
+    color:$primary;
+    line-height:1.1;
+}
+
+.social-list{
+    list-style-type:none;
+    padding:0;
+    font-size:0;
+    text-align:center;
+
+    @include media($desktop){
+        float:left;
+        margin:0 20px 0 0;
+    }
+}
+.social-list__item{
+    display:inline-block;
+    @include font-size(16px);
+
+    &:first-child{
+        .social-list__btn{
+            border-left:1px solid $primary;
+        }
+    }
+}
+.social-list__btn{
+    display:inline-block;
+    vertical-align:middle;
+    width:32px;
+    height:32px;
+    line-height:32px;
+    text-align:center;
+    background:none;
+    border:1px solid $primary;
+    border-left:none;
+    color:$primary;
+
+
+    [class^="icon-"]:before, [class*=" icon-"]:before{
+        margin:0;
+    }
+
+    &:hover,
+    &:active,
+    &:focus{
+        background:$primary;
+        color:#fff;
+        outline:0;
+    }
+}
+
+.footer__info,
+.footer__copyright{
+    @include font-size(14px);
+    margin:8px 0;
+    text-align:center;
+}
+@include media($desktop){
+    .footer__info{
+        text-align:left;
+    }
+    .footer__copyright{
+        text-align:right;
+    }
+}

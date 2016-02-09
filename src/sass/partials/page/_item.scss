@@ -9,6 +9,7 @@
     margin:0 auto 25px;
     position:relative;
     @include transition(transform .5s ease-out);
+    text-decoration:none !important;
 
     &:after{
         content:'';
