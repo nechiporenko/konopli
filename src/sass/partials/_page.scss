@@ -1,8 +1,10 @@
 ﻿@import "../modules/_base.scss";
 
 @import "page/_breadcrumbs.scss";
-@import "page/_main-slider.scss";
-@import "page/_item.scss";
+@import "page/_main-slider.scss";//топ-слайдер на главной
+@import "page/_item.scss";//блок-превью новостей, видео, картинка-линк...
+@import "page/_subscribe.scss";//подписаться на новости
+@import "page/_video-slider.scss";//видео-слайдер
 @import "page/_scroll-up.scss";
 
 

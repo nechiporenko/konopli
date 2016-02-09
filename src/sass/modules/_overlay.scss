@@ -14,3 +14,11 @@
     display:none; //покажем скриптом
 }
 
+
+/*Bootstrap Modal fix*/
+.modal-backdrop{
+    z-index:2050;
+}
+.modal{
+    z-index:2100;
+}

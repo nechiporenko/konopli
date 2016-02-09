@@ -1,0 +1,23 @@
+﻿@import "../../modules/_base.scss";
+/*Video Slider*/
+
+@include media($mobile){
+    .video-slider{
+        .bx-wrapper{
+            .bx-controls-direction a{
+                display:block;
+                top:38%;
+            }
+        }
+    }
+}
+.video-slider__list{
+    @extend .g-clearlist;
+}
+.video-slider__item{
+    @extend .g-column;
+
+    @include media($mobile){
+        width:460px;
+    }
+}

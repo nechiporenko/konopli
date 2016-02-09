@@ -41,6 +41,9 @@
 // Кнопка скролла страницы
 // Главный слайдер
 // Слайдер товаров
+// Слайдер видео
+// Фиксим подергивание хидера при открытии бутстраповского модального окна
+// Видео в модальном окне
 
 jQuery(document).ready(function ($) {
     //Кэшируем
@@ -125,7 +128,7 @@ jQuery(document).ready(function ($) {
     // Кнопка скролла страницы
     //---------------------------------------------------------------------------------------
     var initPageScroller = (function () {
-        var $scroller = $('<div class="scroll-up-btn"><i class="icon-up-open-big"></i></div>');
+        var $scroller = $('<div class="scroll-up-btn"><i class="glyphicon glyphicon-menu-up"></i></div>');
         $body.append($scroller);
         $window.on('scroll', function () {
             if ($(this).scrollTop() > 300) {
@@ -182,7 +185,7 @@ jQuery(document).ready(function ($) {
                         hideControlOnEnd: true
                     },
                     winW = $window.width();
-                if (winW < 500) {
+                if (winW < 550) {
                     setting = $.extend(settings1, common);
                 }
                 if (winW >= 550 && winW < 750) {
@@ -206,6 +209,142 @@ jQuery(document).ready(function ($) {
             $slider.reloadSlider($.extend(getSliderSettings(), { startSlide: $slider.getCurrentSlide() }));
         }
     }
-    if($('.js-product-slider').length){initProductSlider()}
+    if ($('.js-product-slider').length) { initProductSlider() }
+
+    //
+    // Слайдер видео
+    //---------------------------------------------------------------------------------------
+    function initVideoSlider() {
+        var $slider = $('.js-video-slider'),
+            getSliderSettings = function () {//будем показывать разное кол-во слайдов на разных разрешениях
+                var setting,
+                    settings1 = {
+                        maxSlides: 1,
+                        slideWidth: 260,
+                    },
+                    settings2 = {
+                        maxSlides: 1,
+                        slideWidth: 460,
+                    },
+                    settings3 = {
+                        maxSlides: 2,
+                        slideWidth: 460,
+                    },
+                    common = {
+                        minSlides: 1,
+                        moveSlides: 1,
+                        slideMargin: 20,
+                        auto: false,
+                        pager: false,
+                        infiniteLoop: false,
+                        hideControlOnEnd: true
+                    },
+                    winW = $window.width();
+                if (winW < 550) {
+                    setting = $.extend(settings1, common);
+                }
+                if (winW >= 550 && winW < 990) {
+                    setting = $.extend(settings2, common);
+                }
+                if (winW >= 990) {
+                    setting = $.extend(settings3, common);
+                }
+                return setting;
+            }
+        $slider = $slider.bxSlider(getSliderSettings()); //запускаем слайдер
+
+        $window.on('resize', function () {
+            setTimeout(recalcSliderSettings, 500);
+        });
+
+        function recalcSliderSettings() {
+            $slider.reloadSlider($.extend(getSliderSettings(), { startSlide: $slider.getCurrentSlide() }));
+        }
+    }
+    if ($('.js-video-slider').length) { initVideoSlider() }
+
+    //
+    // Фиксим подергивание хидера при открытии бутстраповского модального окна
+    //---------------------------------------------------------------------------------------
+    var fixBootstrapModal = (function () {
+        var $header = $('.header__inner');
+        $body.on('show.bs.modal', function () {
+            if (this.clientHeight <= window.innerHeight) {
+                return;
+            }
+            // Get scrollbar width
+            var scrollbarWidth = getScrollBarWidth()
+            if (scrollbarWidth) {
+                $header.css('margin-right', scrollbarWidth);
+            }
+        })
+    .on('hide.bs.modal', function () {
+        $header.css('margin-right', 0);
+    });
+
+        function getScrollBarWidth() {
+            var inner = document.createElement('p');
+            inner.style.width = "100%";
+            inner.style.height = "200px";
+
+            var outer = document.createElement('div');
+            outer.style.position = "absolute";
+            outer.style.top = "0px";
+            outer.style.left = "0px";
+            outer.style.visibility = "hidden";
+            outer.style.width = "200px";
+            outer.style.height = "150px";
+            outer.style.overflow = "hidden";
+            outer.appendChild(inner);
+
+            document.body.appendChild(outer);
+            var w1 = inner.offsetWidth;
+            outer.style.overflow = 'scroll';
+            var w2 = inner.offsetWidth;
+            if (w1 == w2) w2 = outer.clientWidth;
+
+            document.body.removeChild(outer);
+
+            return (w1 - w2);
+        };
+    })();
+
+    
+
+    //
+    // Видео в модальном окне
+    //---------------------------------------------------------------------------------------
+    function openVideoModal() {
+        $('.b-item').on('click', '.js-video', function (e) {
+            e.preventDefault();
+            var link = $(this).attr('href'),
+                title = $(this).parent().find('.b-item__title').text();
+                id = getYoutubeID(link),
+                $video = $('#video');//айди модального окна
+
+            if (id) {
+                $video.find('iframe').attr('src', 'https://www.youtube.com/embed/' + id + '?rel=0&amp;showinfo=0;autoplay=1');
+                $video.find('.g-title').text(title);//передали в окно название видео
+                $video.modal();//открыли окно
+            }
+
+            $video.on('hide.bs.modal', function (e) {//при закрытии окна - прибъем видео
+                $video.find('iframe').attr('src', '');
+            });
+
+            function getYoutubeID(url) {//парсим youtube-ссылку, возвращаем id видео
+                var regExp = /.*(?:youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=)([^#\&\?]*).*/;
+                var match = url.match(regExp),
+                    urllink;
+                if (match && match[1].length == 11) {
+                    urllink = match[1];
+                } else {
+                    urllink = false;
+                }
+                return urllink;
+            }
+        });
+    }
+    if($('.js-video').length){openVideoModal()}
     
 });

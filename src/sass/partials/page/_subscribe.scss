@@ -1,0 +1,66 @@
+﻿@import "../../modules/_base.scss";
+/*Subscribe section*/
+.b-subscribe{
+    padding:26px 0;
+    background:$primary;
+    color:#fff;
+}
+.b-subscribe__title{
+    display:block;
+    margin:11px 0;
+    @include font-size(14px);
+    color:#fff;
+    text-transform:uppercase;
+    text-align:center;
+    font-family:$font-bold;
+    line-height:1;
+}
+
+.b-subscribe__input{
+    @extend .g-input;
+
+    @include media($desktop){
+        margin:0;
+    }
+}
+
+.b-subscribe__btn{
+    @extend .g-btn;
+    border-color: #fff;
+    color:#fff;
+
+    &:before{
+        background:#fff;
+    }
+
+    &:hover,
+    &:focus,
+    &:active{
+        color:$primary;
+     }
+}
+
+.b-subscribe__sbtn{
+    float:right;
+    width:34px;
+    height:34px;
+    line-height:34px;
+    text-align:center;
+    background:$primary;
+    border:1px solid #fff;
+    margin:1px 0 1px 3px;
+    color:#fff;
+    @include font-size(16px);
+
+    &:hover,
+    &:active,
+    &:focus{
+        outline:0;
+        color:$primary;
+        background:#fff;
+    }
+
+    [class^="icon-"]:before, [class*=" icon-"]:before{
+        margin:0;
+    }
+}
