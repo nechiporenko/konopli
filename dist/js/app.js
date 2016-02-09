@@ -44,6 +44,7 @@
 // Слайдер видео
 // Фиксим подергивание хидера при открытии бутстраповского модального окна
 // Видео в модальном окне
+// Слайдер логотипов партнеров
 
 jQuery(document).ready(function ($) {
     //Кэшируем
@@ -309,8 +310,6 @@ jQuery(document).ready(function ($) {
         };
     })();
 
-    
-
     //
     // Видео в модальном окне
     //---------------------------------------------------------------------------------------
@@ -345,6 +344,70 @@ jQuery(document).ready(function ($) {
             }
         });
     }
-    if($('.js-video').length){openVideoModal()}
+    if ($('.js-video').length) { openVideoModal() }
+
+    //
+    // Слайдер логотипов партнеров
+    //---------------------------------------------------------------------------------------
+    function initLogoSlider() {
+        var $slider = $('.js-logo-slider'),
+            getSliderSettings = function () {//будем показывать разное кол-во слайдов на разных разрешениях
+                var setting,
+                    settings1 = {
+                        maxSlides: 2,
+                    },
+                    settings2 = {
+                        maxSlides: 3,
+                    },
+                    settings3 = {
+                        maxSlides: 4,
+                    },
+                    settings4 = {
+                        maxSlides: 5,
+                    },
+                    settings5 = {
+                        maxSlides: 6,
+                    },
+                    common = {
+                        minSlides: 1,
+                        moveSlides: 1,
+                        slideWidth: 140,
+                        slideMargin: 20,
+                        pager: false,
+                        controls: false,
+                        ticker: true,
+                        speed: 60000
+                    },
+                    winW = $window.width();
+
+                if (winW < 400) {
+                    setting = $.extend(settings1, common);
+                }
+                if (winW >= 400 && winW < 550) {
+                    setting = $.extend(settings2, common);
+                }
+                if (winW >= 550 && winW < 800) {
+                    setting = $.extend(settings3, common);
+                }
+                if (winW >= 800 && winW < 990) {
+                    setting = $.extend(settings4, common);
+                }
+                if (winW >= 990) {
+                    setting = $.extend(settings5, common);
+                }
+                return setting;
+            }
+        $slider = $slider.bxSlider(getSliderSettings()); //запускаем слайдер
+
+        $window.on('resize', function () {
+            setTimeout(recalcSliderSettings, 500);
+        });
+
+        function recalcSliderSettings() {
+            $slider.reloadSlider($.extend(getSliderSettings(), { startSlide: $slider.getCurrentSlide() }));
+        }
+
+    }
+    if ($('.js-logo-slider').length) { initLogoSlider() }
     
 });
