@@ -1,7 +1,6 @@
 ﻿@import "../../modules/_base.scss";
 /*Main Slider*/
 .main-slider{
-    padding:10px 0;
     position:relative;
     overflow:hidden;
 
@@ -77,24 +76,23 @@
 }
 .main-slider__item{
     display:block;
+    height:210px;
+    overflow:hidden;
     @include font-size(36px);
     color:#fff;
     font-family:$font-retro;
     line-height:1.1;
-
-    @include media($tablet){
-        height:210px;
-        overflow:hidden;
-    }
 }
-.main-slider__content{
+.main-slider__wrapper{
     display:table;
     padding-bottom:30px;
     width:100%;
-    height:210px;
+    max-width:480px;
+    margin:0 auto;
+    height:100%;
     table-layout:fixed;
 }
-.main-slider__cell{
+.main-slider__text{
     display:table-cell;
     vertical-align:bottom;
     text-align:center;
@@ -142,9 +140,13 @@
 /*Main Slider Menu*/
 .slider-menu{
     @extend .g-clearfix;
-    margin:30px 0 0 0;
+    margin:10px 0 0 0;
     padding:0;
     list-style-type:none;
+
+    @include media($tablet){
+        margin-top:30px;
+    }
 }
 
 .slider-menu__item{

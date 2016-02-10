@@ -8,6 +8,12 @@
 .f-menu__item{
     @include font-size(12px);
     line-height:3;
+    @include transition(transform .5s ease);
+
+    &:hover,
+    &:active{
+        @include transform(translateX(10px));
+    }
 }
 .f-menu__link{
     color:$text-color;

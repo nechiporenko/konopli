@@ -23,6 +23,15 @@
     }
 }
 
+.b-item--center{
+    .b-item__link{
+        &:hover,
+        &:active{
+            @include transform(rotate(3deg));
+        }
+    }
+}
+
 .b-item__img{
     @extend .g-img-centered;
     border:1px solid $border-color;

@@ -61,6 +61,7 @@ h1, h2, h3, h4, h5, h6, .g-title{
     display:block;
     text-align:center;
     text-transform:uppercase;
+    text-decoration:none !important;
     color:$primary;
     @include font-size(24px);
 }

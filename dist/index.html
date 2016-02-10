@@ -107,47 +107,38 @@
                     <!--slider list start-->
                     <ul class="main-slider__list js-main-slider">
                         <li class="main-slider__item">
-                            <div class="main-slider__content">
-                                <div class="main-slider__cell">
+                            <div class="main-slider__wrapper">
+                                <div class="main-slider__text">
                                     Текст приветствие!<br />
-                                    И основной аргумент, который напрочь<br />
-                                    разбивает миф о вреде конопли
+                                    И основной аргумент, который напрочь разбивает миф о вреде конопли
                                 </div>
                             </div>
                         </li>
                         <li class="main-slider__item">
-                            <div class="main-slider__content">
-                                <div class="main-slider__cell">
-                                    Pellentesque habitant morbi<br />
-                                    tristique senectus et netus et malesuada<br />
-                                    fames ac turpis egestas.
+                            <div class="main-slider__wrapper">
+                                <div class="main-slider__text">
+                                    Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
                                 </div>
                             </div>
                         </li>
                         <li class="main-slider__item">
-                            <div class="main-slider__content">
-                                <div class="main-slider__cell">
-                                    Vestibulum tortor quam,<br />
-                                    feugiat vitae, ultricies eget,<br />
-                                    tempor sit amet, ante.
+                            <div class="main-slider__wrapper">
+                                <div class="main-slider__text">
+                                    Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante.
                                 </div>
                             </div>
                         </li>
                         <li class="main-slider__item">
-                            <div class="main-slider__content">
-                                <div class="main-slider__cell">
-                                    Donec eu libero sit amet quam<br />
-                                    egestas semper. Aenean ultricies<br />
-                                    mi vitae est.
+                            <div class="main-slider__wrapper">
+                                <div class="main-slider__text">
+                                    Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est.
                                 </div>
                             </div>
                         </li>
                         <li class="main-slider__item">
-                            <div class="main-slider__content">
-                                <div class="main-slider__cell">
-                                    Pellentesque fermentum dolor.<br />
-                                    Aliquam quam lectus, facilisis auctor,<br />
-                                    ultrices ut, elementum vulputate, nunc.
+                            <div class="main-slider__wrapper">
+                                <div class="main-slider__text">
+                                    Pellentesque fermentum dolor. Aliquam quam lectus, facilisis auctor, ultrices ut, elementum vulputate, nunc.
                                 </div>
                             </div>
                         </li>
@@ -285,7 +276,7 @@
                         </figure>
                     </div>
                     <div class="col-md-8">
-                        <span class="g-title g-title--alt">Заголовок статьи или название книги</span>
+                        <a href="#" class="g-title g-title--alt">Заголовок статьи или название книги</a>
                         <p>
                             Краткое описание статьи или книги, которое заинтересует пользоателя и он прочтет ее полностью. Cras et tempor ligula, sit amet imperdiet mi. Aliquam nunc risus, placerat et lacinia ac, eleifend ac tortor. Cras et odio nisl. Donec sodales risus quis nulla viverra, eget cursus velit mattis. Vestibulum volutpat sapien ultrices est laoreet, ut lacinia elit molestie. Nulla dictum rutrum tempor. Nam a vestibulum elit, at aliquam est. Quisque lobortis sollicitudin elementum. Nullam luctus eros purus, elementum aliquam ligula semper quis. Ut semper porttitor urna. Suspendisse a lectus venenatis, malesuada nunc convallis, ultricies nisl. Phasellus sit amet laoreet urna. Donec tempor velit vitae orci luctus rhoncus. Aenean commodo nulla vitae est hendrerit vehicula. Nullam luctus eros purus, elementum aliquam ligula semper quis. Aliquam ut bibendum eros, sit amet mattis quam. Maecenas nec pellentesque nibh. Donec quis urna rutrum, venenatis est id, commodo risus. In fermentum nulla vitae risus viverra auctor luctus a nulla. Ut quis quam quis diam imperdiet dapibus. Sed dapibus a ex sed maximus. Nunc euismod bibendum odio, quis ultricies risus. Nulla vel est ex. Sed vitae dui laoreet, vehicula diam quis, feugiat diam. Suspendisse potenti. Suspendisse dolor libero, volutpat feugiat metus eget, vestibulum molestie odio. Donec sodales, magna sed pulvinar semper, quam libero consequat nulla, a imperdiet nibh purus vel metus. Ut auctor efficitur blandit. Nam tempus dui eu lacinia tristique. Nullam luctus eros purus, elementum aliquam ligula semper quis. Duis vestibulum eros erat, in fermentum magna venenatis at. Duis justo magna, ornare sit amet faucibus at, tristique quis velit …
                         </p>
@@ -311,7 +302,7 @@
                         </figure>
                     </div>
                     <div class="col-sm-4">
-                        <figure class="b-item">
+                        <figure class="b-item b-item--center">
                             <a href="#" class="b-item__link">
                                 <img src="http://lorempixel.com/300/300/people/3/" class="b-item__img" alt="News">
                             </a>
@@ -348,8 +339,14 @@
                     </div>
                     <div class="col-md-4">
                         <button type="submit" class="b-subscribe__btn">Подписаться</button>
-                        <button type="button" class="b-subscribe__sbtn"><i class="icon-facebook"></i></button>
-                        <button type="button" class="b-subscribe__sbtn"><i class="icon-vk"></i></button>
+                        <ul class="subscribe-login">
+                            <li class="subscribe-login__item">
+                                <button type="button" class="subscribe-login__btn"><i class="icon-vk"></i></button>
+                            </li>
+                            <li class="subscribe-login__item">
+                                <button type="button" class="subscribe-login__btn"><i class="icon-facebook"></i></button>
+                            </li>
+                        </ul>
                     </div>
                 </form>
             </div>
@@ -553,7 +550,7 @@
                     </ul>
                 </div>
                 <div class="col-sm-4">
-                    <span class="footer__title">Раздел первый</span>
+                    <span class="footer__title">Раздел второй</span>
                     <ul class="f-menu">
                         <li class="f-menu__item">
                             <a href="#" class="f-menu__link">Пункт первый</a>
@@ -570,7 +567,7 @@
                     </ul>
                 </div>
                 <div class="col-sm-4">
-                    <span class="footer__title">Раздел первый</span>
+                    <span class="footer__title">Раздел третий</span>
                     <ul class="f-menu">
                         <li class="f-menu__item">
                             <a href="#" class="f-menu__link">Пункт первый</a>

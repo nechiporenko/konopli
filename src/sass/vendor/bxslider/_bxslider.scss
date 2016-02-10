@@ -39,7 +39,7 @@ $loader:   '../img/loader.gif';
             opacity:.5;
             position:absolute;
             left:50%;
-            bottom:8px;
+            bottom:6px;
             margin-left:-120px;
             z-index:-1;
         }
@@ -85,6 +85,7 @@ $loader:   '../img/loader.gif';
 	.bx-pager-item,
 	.bx-controls-auto .bx-controls-auto-item {
 		display: inline-block;
+        vertical-align:middle;
 	}
 	.bx-pager-item {
 		font-size: 0;
