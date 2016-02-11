@@ -5,6 +5,7 @@
 }
 .b-item__link{
     display:block;
+    will-change:transform;
     max-width:300px;
     margin:0 auto 25px;
     position:relative;

@@ -9,13 +9,13 @@
         content:'';
         display:block;
         position:absolute;
-        top:-5%; right:0;
-        bottom:-5%; left:0;
+        top:-25px; right:0;
+        bottom:-25px; left:0;
     }
 
 
     &:before{
-        will-change:transform;
+        @include transform(translateZ(0));
         background-image:url(../img/slider/slider-xs.jpg);
         background-position:50% 50%;
         background-repeat:no-repeat;
@@ -105,10 +105,10 @@
             display:none;
         }
         .bx-prev{
-            background:url(../img/slider/arrow-left-white.svg) no-repeat;
+            background-image:url(../img/slider/arrow-left-white.svg);
         }
         .bx-next{
-            background:url(../img/slider/arrow-right-white.svg) no-repeat;
+            background-image:url(../img/slider/arrow-right-white.svg);
         }
     }
 }
@@ -117,10 +117,10 @@
     .main-slider{
         .bx-wrapper{
             .bx-prev{
-                background:url(../img/slider/arrow-left-white.png) no-repeat;
+                background-image:url(../img/slider/arrow-left-white.png);
             }
             .bx-next{
-                background:url(../img/slider/arrow-right-white.png) no-repeat;
+                background-image:url(../img/slider/arrow-right-white.png);
             }
         }
     }
