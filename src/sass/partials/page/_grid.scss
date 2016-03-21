@@ -1,0 +1,55 @@
+﻿@import "../../modules/_base.scss";
+/*Salvattore Grid*/
+.b-grid{
+    @extend .g-clearfix;
+    margin-bottom:2*$project-line-height;
+    @include media($small){
+        .b-item{
+            text-align:left;
+        }
+    }
+}
+
+.b-grid__inner{
+    margin:0 -10px;
+}
+
+.b-grid__item{
+    padding:0 10px;
+}
+
+.b-grid__col{
+    float:left;
+    min-height:1px;
+
+    &.size-1of1 { width: 100%; }
+    &.size-1of2 { width: 50%; }
+    &.size-1of3 { width: (100%)/3; }
+}
+
+#grid[data-columns]::before{
+    visibility:hidden;
+}
+
+@media screen and (max-width: 649px){
+    #grid[data-columns]::before{
+        content: '1 .b-grid__col.size-1of1';
+    }
+}
+
+@media screen and (min-width: 650px) and (max-width: 767px) {
+     #grid[data-columns]::before{
+        content: '2 .b-grid__col.size-1of2';
+    }
+}
+
+@media screen and (min-width: 768px){
+     #grid[data-columns]::before{
+        content: '3 .b-grid__col.size-1of3';
+    }
+}
+
+.no-js #grid[data-columns]::before,
+.lt-ie9 #grid[data-columns]::before{
+    display:none;
+}

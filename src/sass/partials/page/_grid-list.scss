@@ -1,0 +1,30 @@
+﻿@import "../../modules/_base.scss";
+/*Grid List*/
+.grid-list{
+    @extend .g-clearfix;
+    padding:0;
+    list-style-type:none;
+    margin:0 -10px;
+}
+
+.grid-list__item{
+    @extend .g-column;
+    margin-bottom:10px;
+    padding-left:10px;
+    padding-right:10px;
+
+    width:50%;
+    @include omega(2n);
+
+    @include media($small){
+        @include omega-reset(2n);
+        width:(100%)/3;
+        @include omega(3n);
+    }
+
+    @include media($tablet){
+        @include omega-reset(3n);
+        width:25%;
+        @include omega(4n);
+    }
+}
