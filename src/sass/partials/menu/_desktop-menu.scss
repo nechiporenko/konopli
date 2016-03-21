@@ -55,6 +55,7 @@
     }
 
     &.current{
+        cursor:default;
         &:before{
             display:block;
         }

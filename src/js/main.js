@@ -148,7 +148,8 @@ jQuery(document).ready(function ($) {
                         auto: false,
                         pager: false,
                         infiniteLoop: false,
-                        hideControlOnEnd: true
+                        hideControlOnEnd: true,
+                        useCSS: false
                     },
                     winW = $window.width();
                 if (winW < 550) {
@@ -203,7 +204,8 @@ jQuery(document).ready(function ($) {
                         auto: false,
                         pager: false,
                         infiniteLoop: false,
-                        hideControlOnEnd: true
+                        hideControlOnEnd: true,
+                        useCSS:false
                     },
                     winW = $window.width();
                 if (winW < 550) {

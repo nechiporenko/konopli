@@ -40,6 +40,16 @@
      }
 }
 
+.no-cssanimations{
+    .b-subscribe__btn{
+        &:hover,
+        &:active,
+        &:focus{
+            background:#fff;
+        }
+    }
+}
+
 
 /*Subscribe Login buttons*/
 .subscribe-login{

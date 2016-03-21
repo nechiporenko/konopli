@@ -20,4 +20,9 @@
     color:$text-color;
     text-decoration:none !important;
     text-transform:uppercase;
+
+    &.current{
+        color:$primary;
+        cursor:default;
+    }
 }

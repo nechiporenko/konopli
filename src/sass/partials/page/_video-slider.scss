@@ -1,12 +1,34 @@
 ﻿@import "../../modules/_base.scss";
 /*Video Slider*/
 
+.video-slider{
+    .bx-wrapper{
+        .bx-controls-direction a{
+            //display:block;
+            top:60%;
+        }
+        .bx-prev{
+            left: -10px;
+        }
+        .bx-next{
+            right: -10px;
+        }
+    }
+}
+
 @include media($mobile){
     .video-slider{
         .bx-wrapper{
             .bx-controls-direction a{
-                display:block;
+                //display:block;
                 top:38%;
+            }
+
+            .bx-prev{
+                left: -25px;
+            }
+            .bx-next{
+                right: -25px;
             }
         }
     }
