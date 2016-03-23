@@ -7,7 +7,7 @@
     margin:0 -10px;
 }
 
-.grid-list__item{
+.grid-list__item{//по умолчанию - 4 колонки на десктопе
     @extend .g-column;
     margin-bottom:10px;
     padding-left:10px;
@@ -26,5 +26,19 @@
         @include omega-reset(3n);
         width:25%;
         @include omega(4n);
+    }
+}
+
+.grid-list--3col{//3 колонки на десктопе
+    .grid-list__item{
+        @include media($tablet){
+            width:(100%/3);
+            @include omega-reset(4n);
+            @include omega(3n);
+        }
+
+        .b-item__title{
+            text-align:left;
+        }
     }
 }

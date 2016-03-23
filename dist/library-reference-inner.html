@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Library Page</title>
+    <title>Library Reference Book Inner Page</title>
     <meta name="description" content="Page Description">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, maximum-scale=1">
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -107,86 +107,140 @@
                         <span itemprop="title" class="breadcrumbs__inner">Главная</span>
                     </a>
                 </li>
+                <li class="breadcrumbs__item" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <a href="library.html" class="breadcrumbs__link" itemprop="url">
+                        <span itemprop="title" class="breadcrumbs__inner">Библиотека</span>
+                    </a>
+                </li>
+                <li class="breadcrumbs__item" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <a href="library-reference.html" class="breadcrumbs__link" itemprop="url">
+                        <span itemprop="title" class="breadcrumbs__inner">Справочник</span>
+                    </a>
+                </li>
                 <li class="breadcrumbs__item">
-                    Библиотека
+                    Сорта конопли
                 </li>
             </ol>
             <!--/BREADCRUMBS END-->
 
             <!--PAGE CONTENT START-->
             <section class="page__section page__section--compact">
-                <h1 class="g-title">Библиотека</h1>
-                <span class="g-subtitle">Выберите интересующий вас раздел</span>
+                <h1 class="g-title">Сорта конопли</h1>
+                <span class="g-subtitle">Воспользуйтесь фильтрами ниже</span>
+
+                <!--PAGE FILTERS START-->
+                <ul class="p-filter">
+                    <li class="p-filter__item">
+                        <div class="btn-group">
+                            <button type="button" class="p-filter__btn" data-toggle="dropdown">Бренды <i class="icon-down-open-big"></i></button>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Бренд 1</a></li>
+                                <li><a href="#">Другой бренд</a></li>
+                                <li><a href="#">Еще какой-то бренд</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="p-filter__item">
+                        <div class="btn-group">
+                            <button type="button" class="p-filter__btn current" data-toggle="dropdown">Названия <i class="icon-down-open-big"></i></button>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Название 1</a></li>
+                                <li><a href="#">Другое название</a></li>
+                                <li><a href="#">Еще какое-то название</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="p-filter__item">
+                        <div class="btn-group">
+                            <button type="button" class="p-filter__btn" data-toggle="dropdown">Типы <i class="icon-down-open-big"></i></button>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Тип 1</a></li>
+                                <li><a href="#">Другой тип</a></li>
+                                <li><a href="#">Еще какой-то тип</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="p-filter__item">
+                        <div class="btn-group">
+                            <button type="button" class="p-filter__btn" data-toggle="dropdown">Категории <i class="icon-down-open-big"></i></button>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Категория 1</a></li>
+                                <li><a href="#">Другая категория</a></li>
+                                <li><a href="#">Еще какая-то категория</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+                <!--/PAGE FILTERS END-->
 
                 <!--GRID-LIST START-->
-                <ul class="grid-list">
+                <ul class="grid-list grid-list--3col">
                     <li class="grid-list__item">
                         <figure class="b-item">
-                            <a href="library-inner.html" class="b-item__link">
+                            <a href="library-reference-item.html" class="b-item__link">
                                 <img src="http://placehold.it/300x288" class="b-item__img" alt="Library">
                             </a>
                             <figcaption class="b-item__description">
-                                <a href="library-inner.html" class="b-item__title">Медицина</a>
+                                <a href="library-reference-item.html" class="b-item__title">
+                                    Название сорта конопли<br />
+                                    (уточняющее название - в скобках)
+                                </a>
                             </figcaption>
                         </figure>
                     </li>
                     <li class="grid-list__item">
                         <figure class="b-item">
-                            <a href="library-inner.html" class="b-item__link">
+                            <a href="library-reference-item.html" class="b-item__link">
                                 <img src="http://placehold.it/300x288" class="b-item__img" alt="Library">
                             </a>
                             <figcaption class="b-item__description">
-                                <a href="library-inner.html" class="b-item__title">Технологии</a>
+                                <a href="library-reference-item.html" class="b-item__title">Название сорта конопли</a>
                             </figcaption>
                         </figure>
                     </li>
                     <li class="grid-list__item">
                         <figure class="b-item">
-                            <a href="library-inner.html" class="b-item__link">
+                            <a href="library-reference-item.html" class="b-item__link">
                                 <img src="http://placehold.it/300x288" class="b-item__img" alt="Library">
                             </a>
                             <figcaption class="b-item__description">
-                                <a href="library-inner.html" class="b-item__title">Выращивание конопли</a>
+                                <a href="library-reference-item.html" class="b-item__title">
+                                    Название сорта конопли<br />
+                                    (уточняющее название - в скобках)
+                                </a>
                             </figcaption>
                         </figure>
                     </li>
                     <li class="grid-list__item">
                         <figure class="b-item">
-                            <a href="library-inner.html" class="b-item__link">
+                            <a href="library-reference-item.html" class="b-item__link">
                                 <img src="http://placehold.it/300x288" class="b-item__img" alt="Library">
                             </a>
                             <figcaption class="b-item__description">
-                                <a href="library-inner.html" class="b-item__title">Наука</a>
+                                <a href="library-reference-item.html" class="b-item__title">Название сорта конопли</a>
                             </figcaption>
                         </figure>
                     </li>
                     <li class="grid-list__item">
                         <figure class="b-item">
-                            <a href="library-inner.html" class="b-item__link">
+                            <a href="library-reference-item.html" class="b-item__link">
                                 <img src="http://placehold.it/300x288" class="b-item__img" alt="Library">
                             </a>
                             <figcaption class="b-item__description">
-                                <a href="library-inner.html" class="b-item__title">Кулинария</a>
+                                <a href="library-reference-item.html" class="b-item__title">
+                                    Название сорта конопли<br />
+                                    (уточняющее название - в скобках)
+                                </a>
                             </figcaption>
                         </figure>
                     </li>
                     <li class="grid-list__item">
                         <figure class="b-item">
-                            <a href="library-inner.html" class="b-item__link">
+                            <a href="library-reference-item.html" class="b-item__link">
                                 <img src="http://placehold.it/300x288" class="b-item__img" alt="Library">
                             </a>
                             <figcaption class="b-item__description">
-                                <a href="library-inner.html" class="b-item__title">Закон</a>
-                            </figcaption>
-                        </figure>
-                    </li>
-                    <li class="grid-list__item">
-                        <figure class="b-item">
-                            <a href="library-reference.html" class="b-item__link">
-                                <img src="http://placehold.it/300x288" class="b-item__img" alt="Library">
-                            </a>
-                            <figcaption class="b-item__description">
-                                <a href="library-reference.html" class="b-item__title">Справочник</a>
+                                <a href="library-reference-item.html" class="b-item__title">Название сорта конопли</a>
                             </figcaption>
                         </figure>
                     </li>

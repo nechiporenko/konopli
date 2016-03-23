@@ -10,6 +10,7 @@
 // Видео в модальном окне
 // Слайдер логотипов партнеров
 // SEO блок - раскроем по клику на ссылку "читать далее"
+// Подключаем Zoom
 
 jQuery(document).ready(function ($) {
     //Кэшируем
@@ -384,5 +385,24 @@ jQuery(document).ready(function ($) {
         e.preventDefault();
         $('.js-seo-target').slideDown();
     });
+    
+
+    //
+    // Подключаем Zoom
+    //---------------------------------------------------------------------------------------
+    function initZoom() {
+        var $zoom = $('.js-zoom'),
+            target = $zoom.attr('href');
+        $zoom.css({ 'cursor': 'crosshair', 'display': 'inline-block' }).find('img').css('display', 'block');
+        $zoom.zoom({
+            url: target,
+            callback: function () {
+                $zoom.on('click', function (e) {
+                    e.preventDefault();
+                });
+            }
+        });
+    };
+    if ($('.js-zoom').length) { initZoom();}
 
 });

@@ -44,7 +44,8 @@
     }
 }
 
-.p-filter__link--current{
+.p-filter__link--current,
+.p-filter__link.current{
     color:$primary;
     border-color:$primary;
 
@@ -56,5 +57,14 @@
 .no-svg .p-filter__link{
     &:after{
         background:url(../img/fallback/cross.png) no-repeat;
+    }
+}
+
+.p-filter__btn{
+    @extend .g-btn;
+
+    &.current{
+        background:$primary;
+        color:#fff;
     }
 }

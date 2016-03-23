@@ -34,6 +34,14 @@ html{
     }
 }
 
+i, em{
+    font-family:$font-italic;
+}
+b, strong{
+    font-family:$font-bold;
+    font-weight:700;
+}
+
 .page__content{
     @include font-size($project-font-size);
     line-height:strip-units($project-line-height/$project-font-size);
@@ -42,6 +50,13 @@ html{
 .page__section{
     padding:50px 0 37px;
     background:#fff;
+
+    b, strong{
+        font-family:$font-regular;
+        font-weight:400;
+        color:$title-color;
+        text-shadow:0 0 .1px rgba($title-color, .5);
+    }
 }
 
 .page__section--compact{
@@ -71,13 +86,15 @@ h1, h2, h3, h4, h5, h6, .g-title{
 }
 
 .g-title--alt{
-    text-align:left;
-    
+    @include font-size(14px);
+    color:$title-color;
+    text-align:left;   
 }
 
 .g-title--alt-center{
     @include font-size(14px);
     color:$title-color;
+   text-align:center;
 }
 
 .g-subtitle{
@@ -123,13 +140,7 @@ h1, h2, h3, h4, h5, h6, .g-title{
     color:$primary;
 }
 
-i, em{
-    font-family:$font-italic;
-}
-b, strong{
-    font-family:$font-bold;
-    font-weight:700;
-}
+
 
 /* Links */
 a {
@@ -150,6 +161,21 @@ ol, ul {
     list-style-type:none;
     margin:0;
     padding:0;
+}
+
+.g-description-list{
+    @extend .g-clearfix;
+    dt, dd{
+        float:left;
+    }
+
+    dt{
+        margin-right:15px;
+        clear:both;
+        font-weight:400;
+        color:$title-color;
+        text-shadow:0 0 .1px rgba($title-color, .5);
+    }
 }
 
 /* Spacing */

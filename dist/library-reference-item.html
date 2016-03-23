@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Library Page</title>
+    <title>Library Reference Book Item Page</title>
     <meta name="description" content="Page Description">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, maximum-scale=1">
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -107,91 +107,74 @@
                         <span itemprop="title" class="breadcrumbs__inner">Главная</span>
                     </a>
                 </li>
+                <li class="breadcrumbs__item" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <a href="library.html" class="breadcrumbs__link" itemprop="url">
+                        <span itemprop="title" class="breadcrumbs__inner">Библиотека</span>
+                    </a>
+                </li>
+                <li class="breadcrumbs__item" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <a href="library-reference.html" class="breadcrumbs__link" itemprop="url">
+                        <span itemprop="title" class="breadcrumbs__inner">Справочник</span>
+                    </a>
+                </li>
+                <li class="breadcrumbs__item" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <a href="library-reference-inner.html" class="breadcrumbs__link" itemprop="url">
+                        <span itemprop="title" class="breadcrumbs__inner">Сорта конопли</span>
+                    </a>
+                </li>
                 <li class="breadcrumbs__item">
-                    Библиотека
+                    Название сорта конопли
                 </li>
             </ol>
             <!--/BREADCRUMBS END-->
 
             <!--PAGE CONTENT START-->
             <section class="page__section page__section--compact">
-                <h1 class="g-title">Библиотека</h1>
-                <span class="g-subtitle">Выберите интересующий вас раздел</span>
+                <header>
+                    <span class="g-title">Сорта конопли</span>
+                    <span class="g-subtitle">Вы смотрите сорт конопли в библиотеке из раздела <a href="library-reference.html">Справочник</a></span>
+                </header>
 
-                <!--GRID-LIST START-->
-                <ul class="grid-list">
-                    <li class="grid-list__item">
-                        <figure class="b-item">
-                            <a href="library-inner.html" class="b-item__link">
-                                <img src="http://placehold.it/300x288" class="b-item__img" alt="Library">
-                            </a>
-                            <figcaption class="b-item__description">
-                                <a href="library-inner.html" class="b-item__title">Медицина</a>
-                            </figcaption>
-                        </figure>
-                    </li>
-                    <li class="grid-list__item">
-                        <figure class="b-item">
-                            <a href="library-inner.html" class="b-item__link">
-                                <img src="http://placehold.it/300x288" class="b-item__img" alt="Library">
-                            </a>
-                            <figcaption class="b-item__description">
-                                <a href="library-inner.html" class="b-item__title">Технологии</a>
-                            </figcaption>
-                        </figure>
-                    </li>
-                    <li class="grid-list__item">
-                        <figure class="b-item">
-                            <a href="library-inner.html" class="b-item__link">
-                                <img src="http://placehold.it/300x288" class="b-item__img" alt="Library">
-                            </a>
-                            <figcaption class="b-item__description">
-                                <a href="library-inner.html" class="b-item__title">Выращивание конопли</a>
-                            </figcaption>
-                        </figure>
-                    </li>
-                    <li class="grid-list__item">
-                        <figure class="b-item">
-                            <a href="library-inner.html" class="b-item__link">
-                                <img src="http://placehold.it/300x288" class="b-item__img" alt="Library">
-                            </a>
-                            <figcaption class="b-item__description">
-                                <a href="library-inner.html" class="b-item__title">Наука</a>
-                            </figcaption>
-                        </figure>
-                    </li>
-                    <li class="grid-list__item">
-                        <figure class="b-item">
-                            <a href="library-inner.html" class="b-item__link">
-                                <img src="http://placehold.it/300x288" class="b-item__img" alt="Library">
-                            </a>
-                            <figcaption class="b-item__description">
-                                <a href="library-inner.html" class="b-item__title">Кулинария</a>
-                            </figcaption>
-                        </figure>
-                    </li>
-                    <li class="grid-list__item">
-                        <figure class="b-item">
-                            <a href="library-inner.html" class="b-item__link">
-                                <img src="http://placehold.it/300x288" class="b-item__img" alt="Library">
-                            </a>
-                            <figcaption class="b-item__description">
-                                <a href="library-inner.html" class="b-item__title">Закон</a>
-                            </figcaption>
-                        </figure>
-                    </li>
-                    <li class="grid-list__item">
-                        <figure class="b-item">
-                            <a href="library-reference.html" class="b-item__link">
-                                <img src="http://placehold.it/300x288" class="b-item__img" alt="Library">
-                            </a>
-                            <figcaption class="b-item__description">
-                                <a href="library-reference.html" class="b-item__title">Справочник</a>
-                            </figcaption>
-                        </figure>
-                    </li>
-                </ul>
-                <!--/GRID-LIST END-->
+                <div class="row">
+                    <figure class="col-sm-4 text-center">
+                        <a href="http://placehold.it/800x800" class="js-zoom">
+                            <img src="http://placehold.it/300x288" alt="Book" />
+                        </a>
+                    </figure>
+
+                    <div class="col-sm-8">
+                        <h1 class="g-title g-title--alt">
+                            Полное название сорта конопли<br />
+                            Уточняющее название сорта конопли
+                        </h1>
+                        <p>Nullam orci nisl, pretium quis convallis sed, mollis ut sapien. Mauris metus massa, pulvinar ut tempus in, placerat vel enim. Nulla varius luctus tortor consequat convallis. Etiam quam augue, tincidunt sed auctor et, malesuada et nisl. Suspendisse tempor, urna id feugiat feugiat, risus libero varius odio, et condimentum nulla justo id nulla. Maecenas a neque eu ex malesuada pharetra eu eu sem. Integer tortor enim, feugiat eu viverra non.</p>
+
+                        <dl class="g-description-list">
+                            <dt>Год выпуска:</dt>
+                            <dd>2005</dd>
+                            <dt>Автор:</dt>
+                            <dd itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Greeg Green</span></dd>
+                            <dt>Жанр:</dt>
+                            <dd>ботаника, растениеводство</dd>
+                            <dt>Издательство</dt>
+                            <dd itemprop="publisher" itemscope itemtype="http://schema.org/Organization"><span itemprop="name">Green Candy Press</span></dd>
+                            <dt>ISBN:</dt>
+                            <dd itemprop="isbn">1931160279</dd>
+                            <dt>Формат:</dt>
+                            <dd>PDF</dd>
+                            <dt>Качество:</dt>
+                            <dd>OCR без ошибок</dd>
+                            <dt>Количество страниц:</dt>
+                            <dd>160</dd>
+                        </dl>
+                    </div>
+                </div><!--/row-->
+
+                <p>Fusce pretium faucibus dui in commodo. Aliquam erat volutpat. Cras neque lectus, euismod mattis purus quis, maximus tempus nunc. Pellentesque pretium ex urna, eu suscipit mi aliquam nec. Nulla vitae euismod leo. Praesent vitae faucibus augue. Nulla placerat quam ac libero sodales, ac dapibus enim volutpat. Quisque non massa a felis consectetur vulputate id vel nisi.</p>
+
+                <p>Proin ut ex iaculis, pretium mi quis, hendrerit nisi. Curabitur eget felis dolor. Maecenas porta nisi vel purus eleifend, eu scelerisque urna dictum. Nam eget odio id turpis pharetra aliquet ut et enim. Integer fermentum leo in tincidunt eleifend. Nunc quis dapibus tellus. Morbi commodo metus quis erat auctor, sit amet pharetra arcu suscipit. Donec eu tortor massa.</p>
+
+                <p>Proin ut ex iaculis, pretium mi quis, hendrerit nisi. Curabitur eget felis dolor. Maecenas porta nisi vel purus eleifend, eu scelerisque urna dictum. Nam eget odio id turpis pharetra aliquet ut et enim. Integer fermentum leo in tincidunt eleifend. Nunc quis dapibus tellus. Morbi commodo metus quis erat auctor, sit amet pharetra arcu suscipit. Donec eu tortor massa.</p>
             </section>
             <!--/PAGE CONTENT END-->
 

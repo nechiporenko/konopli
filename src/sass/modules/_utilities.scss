@@ -10,6 +10,24 @@
   box-sizing: border-box;
 }
 
+.g-img-left,
+.g-img-right{
+    display:block;
+   margin-bottom:9px;
+}
+
+@include media($tablet){
+    .g-img-left{
+        float:left;
+        margin:0 20px 5px 0;
+    }
+
+    .g-img-right{
+        float:right;
+        margin:0 0 5px 20px;
+    }
+}
+
 .g-as-table{
     display:table;
     width:100%;
