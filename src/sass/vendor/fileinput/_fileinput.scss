@@ -1,0 +1,29 @@
+﻿@import "../../modules/_base.scss";
+/*File Input customize*/
+.bootstrap-filestyle{
+    .btn.btn-default{
+        padding:7px 12px;
+        border:1px solid $primary;
+        color:#fff;
+        background:$primary;
+        outline:0;
+        border-radius:0;
+        @include transition(all .15s ease-in);
+
+        &:hover,
+        &:active{
+            background:lighten($primary, 10%);
+            border-color:lighten($primary, 10%);
+        }
+    }
+
+    input.form-control{
+        height:36px;
+        border-radius:0;
+        border-color:1px solid $border-color;
+        &:disabled{
+            background:#fff;
+            box-shadow:inset 0 0 8px rgba($border-color, .6);
+        }
+    }
+}

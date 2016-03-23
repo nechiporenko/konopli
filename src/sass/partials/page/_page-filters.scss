@@ -25,6 +25,7 @@
     text-decoration:none !important;
     text-transform:uppercase;
     position:relative;
+    @include transition(all .15s ease-in);
 
     &:after{
         content:'';
@@ -51,6 +52,11 @@
 
     &:after{
         display:block;
+    }
+
+    &:hover,
+    &:active{
+        border-style:dashed;
     }
 }
 

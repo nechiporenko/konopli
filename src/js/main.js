@@ -11,6 +11,7 @@
 // Слайдер логотипов партнеров
 // SEO блок - раскроем по клику на ссылку "читать далее"
 // Подключаем Zoom
+// Стилизуем загрузчики файлов
 
 jQuery(document).ready(function ($) {
     //Кэшируем
@@ -403,6 +404,26 @@ jQuery(document).ready(function ($) {
             }
         });
     };
-    if ($('.js-zoom').length) { initZoom();}
+    if ($('.js-zoom').length) { initZoom(); }
+
+
+    //
+    // Стилизуем загрузчики файлов
+    //---------------------------------------------------------------------------------------
+    (function () {
+        $('.js-upload-img').filestyle({
+            buttonText: 'Файл картинки',
+            iconName: 'glyphicon glyphicon-picture',
+            buttonBefore: true
+        });
+
+        $('.js-upload-text').filestyle({
+            buttonText: 'Текстовый файл',
+            iconName: 'glyphicon glyphicon-paperclip',
+            buttonBefore: false
+        });
+
+        $('.icon-span-filestyle').removeClass('icon-span-filestyle').addClass('span-filestyle');//фиксим фонтелло-баг
+    })();
 
 });
