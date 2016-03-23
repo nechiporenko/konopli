@@ -65,6 +65,10 @@ textarea {
     @include px2rem(padding, 6px 10px);
 }
 
+.g-textarea--2x{
+    @include px2rem(min-height, $project-line-height*8);
+}
+
 .g-label{
     display: block;
     @include px2rem(margin-bottom, 6px);
