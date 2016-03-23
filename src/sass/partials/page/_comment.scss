@@ -1,0 +1,20 @@
+﻿@import "../../modules/_base.scss";
+/*Comments block*/
+.b-comment{
+    @include font-size(14px);
+    padding-top:15px;
+}
+.b-comment__inner{
+    margin-bottom:$project-line-height;
+    @extend .g-clearfix;
+}
+.b-comment__name{
+    display:block;
+    color:$title-color;
+    text-shadow:0 0 .1px rgba($title-color, .5);
+}
+
+.b-comment__date{
+    display:block;
+    margin-bottom:$project-line-height;
+}

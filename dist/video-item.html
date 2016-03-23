@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Add News Page</title>
+    <title>Video Item Page</title>
     <meta name="description" content="Page Description">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, maximum-scale=1">
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -31,10 +31,10 @@
                         <a href="library.html" class="menu__link">Библиотека</a>
                     </li>
                     <li class="menu__item">
-                        <a href="news.html" class="menu__link current">Новости</a>
+                        <a href="news.html" class="menu__link">Новости</a>
                     </li>
                     <li class="menu__item">
-                        <a href="video.html" class="menu__link">Видео</a>
+                        <a href="video.html" class="menu__link current">Видео</a>
                     </li>
                     <li class="menu__item">
                         <a href="partners.html" class="menu__link">Партнеры</a>
@@ -108,73 +108,98 @@
                     </a>
                 </li>
                 <li class="breadcrumbs__item" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
-                    <a href="index.html" class="breadcrumbs__link" itemprop="url">
-                        <span itemprop="title" class="breadcrumbs__inner">Новости</span>
+                    <a href="video.html" class="breadcrumbs__link" itemprop="url">
+                        <span itemprop="title" class="breadcrumbs__inner">Видео</span>
                     </a>
                 </li>
                 <li class="breadcrumbs__item">
-                    Добавить новость
+                    Название видео  
                 </li>
             </ol>
             <!--/BREADCRUMBS END-->
 
             <!--PAGE CONTENT START-->
             <section class="page__section page__section--compact">
-                <h1 class="g-title">Добавить новость</h1>
-                <span class="g-subtitle">Мотивирующий текст для заполнения формы</span>
-                
+                <header>
+                    <span class="g-title">Видео</span>
+                    <span class="g-subtitle">Вы смотрите видео в разделе <a href="library-inner.html">Видео</a></span>
+                </header>
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <!--VIDEO CONTENT START-->
+                        <figure class="g-video-wrap">
+                            <iframe width="420" height="315" src="https://www.youtube.com/embed/I_izvAbhExY"  allowfullscreen></iframe>
+                        </figure>
+                        <!--/VIDEO CONTENT END-->
+                    </div>
+                    <div class="col-md-6">
+                        <h1 class="g-title g-title--alt">Полное название видео, возможно оно будет длинное и займет несколько строк</h1>
+                        <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nullam gravida pharetra elit in lobortis. Praesent eu mattis dolor. Aenean posuere eros purus, vitae feugiat odio ullamcorper et. Aenean vitae tellus venenatis, scelerisque nisi ut, accumsan velit. Sed gravida ligula eu laoreet ornare. Sed non turpis non ante elementum vulputate vitae nec urna. Suspendisse nec enim id quam ultricies semper. Nunc a luctus ipsum. Duis nec fringilla enim. Praesent et neque nec massa mollis sollicitudin ac eu urna</p>
+
+                        <dl class="g-description-list">
+                            <dt>Рубрика:</dt>
+                            <dd><a href="#">Рубрика 1</a></dd>
+                            <dt>Автор:</dt>
+                            <dd itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Greeg Green</span></dd>
+                            <dt>Жанр:</dt>
+                            <dd>ботаника, растениеводство</dd>
+                        </dl>
+                    </div>
+                </div><!--/row-->
+
+                <p>&nbsp;</p>
+                <span class="g-title g-title--alt">21 комментарий</span>
+                <!--COMMENT FORM START-->
                 <form>
                     <div class="row">
-                        <div class="col-md-4">
-                            <label class="g-title g-title--alt">Имя автора</label>
-                            <input type="text" class="g-input" placeholder="Введите Ваше имя" required />
-                        </div>
-                        <div class="col-md-4">
-                            <label class="g-title g-title--alt">Источник</label>
-                            <input type="url" class="g-input" placeholder="Введите ссылку на источник" />
-                        </div>
-                        <div class="col-md-4">
-                            <label class="g-title g-title--alt">Email</label>
-                            <input type="email" class="g-input" placeholder="Введите Ваш email" required />
+                        <div class="col-sm-12">
+                            <label class="g-visuallyhidden">Комментарий</label>
+                            <textarea class="g-textarea" placeholder="Оставьте комментарий" required></textarea>
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-md-12">
-                            <label class="g-title g-title--alt">Заголовок новости</label>
-                            <input type="text" class="g-input" placeholder="Введите заголовок новости" required />
+                        <div class="col-sm-6">
+                            <input type="text" class="g-input" placeholder="Ваше имя" required />
+                        </div>
+                        <div class="col-sm-6 text-right">
+                            <button type="submit" class="g-btn">Опубликовать</button>
                         </div>
                     </div>
-
-                    <div class="row">
-                        <div class="col-md-6">
-                            <label class="g-title g-title--alt">Картинка для новости</label>
-                            <input type="file" class="js-upload-img" />
-                            <p><small>Минимальный размер картинки 300х288 пикселей</small></p>
-                        </div>
-                        <div class="col-md-6">
-                            <label class="g-title g-title--alt">Файл с текстом новости</label>
-                            <input type="file" class="js-upload-text" />
-                            <p><small>В вормате txt, doc, rtf, pdf</small></p>
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        <div class="col-md-12">
-                            <label class="g-title g-title--alt">Сообщение</label>
-                            <textarea class="g-textarea" placeholder="Дополнительная информация для нас"></textarea>
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        <div class="col-md-4 col-md-offset-4">
-                            <button type="submit" class="g-btn g-full-width">Отправить</button>
-                            <p>&nbsp;</p>
-                            <p class="text-center">
-                                <small>Новость будет опубликована после проверки модератором</small>
-                            </p>
-                        </div>
-                    </div>
+                    <p class="text-center">
+                        <small>Коментарий будет опубликован после проверки модератором</small>
+                    </p>
                 </form>
+                <!--/COMMENT FORM END-->
+
+                <!--COMMENTS BLOCK START-->
+                <div class="b-comment">
+                    <div class="b-comment__inner">
+                        <span class="b-comment__name">Дарья Судакова</span>
+                        <time datetime="2015-12-27T14:48" class="b-comment__date">27/12/2015 в 14:48</time>
+
+                        <p>
+                            Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nullam gravida pharetra elit in lobortis. Praesent eu mattis dolor. Aenean posuere eros purus, vitae feugiat odio ullamcorper et. Aenean vitae tellus venenatis, scelerisque nisi ut, accumsan velit. Sed gravida ligula eu laoreet ornare. Sed non turpis non ante elementum vulputate vitae nec urna. Suspendisse nec enim id quam ultricies semper. Nunc a luctus ipsum. Duis nec fringilla enim. Praesent et neque nec massa mollis sollicitudin ac eu urna.
+                        </p>
+                    </div>
+                    
+                    <div class="b-comment__inner">
+                        <span class="b-comment__name">Михаил Опанасенко</span>
+                        <time datetime="2015-12-27T14:48" class="b-comment__date">27/12/2015 в 14:48</time>
+                        <p>
+                            Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nullam gravida pharetra elit in lobortis. Praesent eu mattis dolor. Aenean posuere eros purus, vitae feugiat odio ullamcorper et. Aenean vitae tellus venenatis, scelerisque nisi ut, accumsan velit. Sed gravida ligula eu laoreet ornare. Sed non turpis non ante elementum vulputate vitae nec urna. Suspendisse nec enim id quam ultricies semper. Nunc a luctus ipsum. Duis nec fringilla enim. Praesent et neque nec massa mollis sollicitudin ac eu urna.
+                        </p>
+                    </div>
+
+                    <!--MORE BUTTON START-->
+                    <div class="row">
+                        <div class="col-sm-4 col-sm-offset-4">
+                            <button type="button" class="g-btn g-full-width" id="load">Показать еще</button>
+                        </div>
+                    </div>
+                    <!--/MORE BUTTON END-->
+                </div>
+                <!--/COMMENTS BLOCK END-->
             </section>
             <!--/PAGE CONTENT END-->
 
@@ -284,7 +309,7 @@
                 <a href="news.html" class="m-menu__link">Новости</a>
             </li>
             <li class="m-menu__item">
-                <a href="video.html" class="m-menu__link">Видео</a>
+                <a href="video.html" class="m-menu__link current">Видео</a>
             </li>
             <li class="m-menu__item">
                 <a href="partners.html" class="m-menu__link">Партнеры</a>

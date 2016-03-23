@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Add News Page</title>
+    <title>Video Page</title>
     <meta name="description" content="Page Description">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, maximum-scale=1">
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -31,10 +31,10 @@
                         <a href="library.html" class="menu__link">Библиотека</a>
                     </li>
                     <li class="menu__item">
-                        <a href="news.html" class="menu__link current">Новости</a>
+                        <a href="news.html" class="menu__link">Новости</a>
                     </li>
                     <li class="menu__item">
-                        <a href="video.html" class="menu__link">Видео</a>
+                        <a href="video.html" class="menu__link current">Видео</a>
                     </li>
                     <li class="menu__item">
                         <a href="partners.html" class="menu__link">Партнеры</a>
@@ -107,74 +107,114 @@
                         <span itemprop="title" class="breadcrumbs__inner">Главная</span>
                     </a>
                 </li>
-                <li class="breadcrumbs__item" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
-                    <a href="index.html" class="breadcrumbs__link" itemprop="url">
-                        <span itemprop="title" class="breadcrumbs__inner">Новости</span>
-                    </a>
-                </li>
                 <li class="breadcrumbs__item">
-                    Добавить новость
+                    Видео
                 </li>
             </ol>
             <!--/BREADCRUMBS END-->
 
             <!--PAGE CONTENT START-->
             <section class="page__section page__section--compact">
-                <h1 class="g-title">Добавить новость</h1>
-                <span class="g-subtitle">Мотивирующий текст для заполнения формы</span>
+                <h1 class="g-title">Видео</h1>
+                <span class="g-subtitle">Воспользуйтесь фильтрами ниже</span>
                 
-                <form>
-                    <div class="row">
-                        <div class="col-md-4">
-                            <label class="g-title g-title--alt">Имя автора</label>
-                            <input type="text" class="g-input" placeholder="Введите Ваше имя" required />
-                        </div>
-                        <div class="col-md-4">
-                            <label class="g-title g-title--alt">Источник</label>
-                            <input type="url" class="g-input" placeholder="Введите ссылку на источник" />
-                        </div>
-                        <div class="col-md-4">
-                            <label class="g-title g-title--alt">Email</label>
-                            <input type="email" class="g-input" placeholder="Введите Ваш email" required />
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-12">
-                            <label class="g-title g-title--alt">Заголовок новости</label>
-                            <input type="text" class="g-input" placeholder="Введите заголовок новости" required />
-                        </div>
-                    </div>
+                <!--PAGE FILTERS START-->
+                <ul class="p-filter">
+                    <li class="p-filter__item">
+                        <a href="#" class="p-filter__link current" data-target="tag1">Рубрика 1</a>
+                    </li>
+                    <li class="p-filter__item">
+                        <a href="#" class="p-filter__link" data-target="tag2">Рубрика 2</a>
+                    </li>
+                    <li class="p-filter__item">
+                        <a href="#" class="p-filter__link current" data-target="tag3">Рубрика 3</a>
+                    </li>
+                </ul>
+                <!--/PAGE FILTERS END-->
 
-                    <div class="row">
-                        <div class="col-md-6">
-                            <label class="g-title g-title--alt">Картинка для новости</label>
-                            <input type="file" class="js-upload-img" />
-                            <p><small>Минимальный размер картинки 300х288 пикселей</small></p>
-                        </div>
-                        <div class="col-md-6">
-                            <label class="g-title g-title--alt">Файл с текстом новости</label>
-                            <input type="file" class="js-upload-text" />
-                            <p><small>В вормате txt, doc, rtf, pdf</small></p>
-                        </div>
+                <!--VIDEO PREVIEW BLOCKS START-->
+                <div class="row">
+                    <div class="col-sm-6">
+                        <figure class="b-item b-item--video" data-target="tag1">
+                            <a href="video-item.html" class="b-item__link">
+                                <img src="http://placehold.it/460x258" class="b-item__img" alt="Preview" />
+                            </a>
+                            <figcaption class="b-item__description">
+                                <a href="video-item.html" class="b-item__title">Название видео</a>
+                                <p class="b-item__subtitle">Краткое описание видео, которое помогает с одного предложения определить то, что именно его хочет посмотреть пользователь в первую очередь...</p>
+                            </figcaption>
+                        </figure>
                     </div>
+                    <div class="col-sm-6">
+                        <figure class="b-item b-item--video" data-target="tag2">
+                            <a href="video-item.html" class="b-item__link">
+                                <img src="http://placehold.it/460x258" class="b-item__img" alt="Preview" />
+                            </a>
+                            <figcaption class="b-item__description">
+                                <a href="video-item.html" class="b-item__title">Другое Название видео</a>
+                                <p class="b-item__subtitle">Краткое описание видео, которое помогает с одного предложения определить то, что именно его хочет посмотреть пользователь в первую очередь...</p>
+                            </figcaption>
+                        </figure>
+                    </div>
+                </div><!--/row-->
+                <div class="row">
+                    <div class="col-sm-6">
+                        <figure class="b-item b-item--video" data-target="tag3">
+                            <a href="video-item.html" class="b-item__link">
+                                <img src="http://placehold.it/460x258" class="b-item__img" alt="Preview" />
+                            </a>
+                            <figcaption class="b-item__description">
+                                <a href="video-item.html" class="b-item__title">Название видео</a>
+                                <p class="b-item__subtitle">Краткое описание видео, которое помогает с одного предложения определить то, что именно его хочет посмотреть пользователь в первую очередь...</p>
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <div class="col-sm-6">
+                        <figure class="b-item b-item--video" data-target="tag1">
+                            <a href="video-item.html" class="b-item__link">
+                                <img src="http://placehold.it/460x258" class="b-item__img" alt="Preview" />
+                            </a>
+                            <figcaption class="b-item__description">
+                                <a href="video-item.html" class="b-item__title">Другое Название видео</a>
+                                <p class="b-item__subtitle">Краткое описание видео, которое помогает с одного предложения определить то, что именно его хочет посмотреть пользователь в первую очередь...</p>
+                            </figcaption>
+                        </figure>
+                    </div>
+                </div><!--/row-->
+                <div class="row">
+                    <div class="col-sm-6">
+                        <figure class="b-item b-item--video" data-target="tag2">
+                            <a href="video-item.html" class="b-item__link">
+                                <img src="http://placehold.it/460x258" class="b-item__img" alt="Preview" />
+                            </a>
+                            <figcaption class="b-item__description">
+                                <a href="video-item.html" class="b-item__title">Название видео</a>
+                                <p class="b-item__subtitle">Краткое описание видео, которое помогает с одного предложения определить то, что именно его хочет посмотреть пользователь в первую очередь...</p>
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <div class="col-sm-6">
+                        <figure class="b-item b-item--video" data-target="tag3">
+                            <a href="video-item.html" class="b-item__link">
+                                <img src="http://placehold.it/460x258" class="b-item__img" alt="Preview" />
+                            </a>
+                            <figcaption class="b-item__description">
+                                <a href="video-item.html" class="b-item__title">Другое Название видео</a>
+                                <p class="b-item__subtitle">Краткое описание видео, которое помогает с одного предложения определить то, что именно его хочет посмотреть пользователь в первую очередь...</p>
+                            </figcaption>
+                        </figure>
+                    </div>
+                </div><!--/row-->
+                <!--/VIDEO PREVIEW BLOCKS END-->
 
-                    <div class="row">
-                        <div class="col-md-12">
-                            <label class="g-title g-title--alt">Сообщение</label>
-                            <textarea class="g-textarea" placeholder="Дополнительная информация для нас"></textarea>
-                        </div>
+                <!--MORE BUTTON START-->
+                <div class="row">
+                    <div class="col-sm-4 col-sm-offset-4">
+                        <button type="button" class="g-btn g-full-width" id="load">Показать еще</button>
                     </div>
+                </div>
+                <!--/MORE BUTTON END-->
 
-                    <div class="row">
-                        <div class="col-md-4 col-md-offset-4">
-                            <button type="submit" class="g-btn g-full-width">Отправить</button>
-                            <p>&nbsp;</p>
-                            <p class="text-center">
-                                <small>Новость будет опубликована после проверки модератором</small>
-                            </p>
-                        </div>
-                    </div>
-                </form>
             </section>
             <!--/PAGE CONTENT END-->
 
@@ -284,7 +324,7 @@
                 <a href="news.html" class="m-menu__link">Новости</a>
             </li>
             <li class="m-menu__item">
-                <a href="video.html" class="m-menu__link">Видео</a>
+                <a href="video.html" class="m-menu__link current">Видео</a>
             </li>
             <li class="m-menu__item">
                 <a href="partners.html" class="m-menu__link">Партнеры</a>

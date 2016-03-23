@@ -1,5 +1,5 @@
 ﻿@import "../../modules/_base.scss";
-/*News block*/
+/*News, library, video block*/
 .b-item{
     text-align:center;
 }
@@ -65,20 +65,6 @@
 
     .b-item__link{
         max-width:460px;
-        &:before{
-            content:'\e029';
-            font-family:'Glyphicons Halflings';
-            @include font-size(48px);
-            position:absolute;
-            top:50%;
-            left:50%;
-            margin-left:-24px;
-            margin-top:-36px;
-            z-index:5;
-            color:$primary;
-            opacity:.5;
-            @include transition(opacity .3s ease);
-        }
 
         &:after{
             padding-top:56.25%;//16:9
@@ -88,13 +74,39 @@
         &:active{
             @include transform(none);
 
-            &:before{
-                opacity:1;
-            }
-
             .b-item__img{
-                opacity:.5;
+                opacity:.8;
             }
         }
+
+        &.js-video{//если будем открывать видео в модальном окне
+            &:before{
+                content:'\e029';
+                font-family:'Glyphicons Halflings';
+                @include font-size(48px);
+                position:absolute;
+                top:50%;
+                left:50%;
+                margin-left:-24px;
+                margin-top:-36px;
+                z-index:5;
+                color:$primary;
+                opacity:.5;
+                @include transition(opacity .3s ease);
+            }
+
+            &:hover,
+            &:active{
+
+                &:before{
+                    opacity:1;
+                }
+
+                .b-item__img{
+                    opacity:.5;
+                }
+            }
+        }
+     
     }
 }
