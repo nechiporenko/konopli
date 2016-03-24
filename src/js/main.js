@@ -12,6 +12,7 @@
 // SEO блок - раскроем по клику на ссылку "читать далее"
 // Подключаем Zoom
 // Стилизуем загрузчики файлов
+// Поиск в каталоге магазина
 
 jQuery(document).ready(function ($) {
     //Кэшируем
@@ -426,4 +427,18 @@ jQuery(document).ready(function ($) {
         $('.icon-span-filestyle').removeClass('icon-span-filestyle').addClass('span-filestyle');//фиксим фонтелло-баг
     })();
 
+    //
+    // Поиск в каталоге магазина
+    //---------------------------------------------------------------------------------------
+    $('.js-search').autoComplete({
+        minChars: 2,
+        source: function (term, suggest) {
+            term = term.toLowerCase();
+            var choices = searchComplete; //берем массив значений из html-странички
+            var matches = [];
+            for (i = 0; i < choices.length; i++)
+                if (~choices[i].toLowerCase().indexOf(term)) matches.push(choices[i]);
+            suggest(matches);
+        }
+    });
 });

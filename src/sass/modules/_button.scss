@@ -88,3 +88,41 @@
         float:right;
     }
 }
+
+
+/*/*Bootstrap style overhead*/
+.btn{
+    padding:7px 12px;//36px
+    outline:0;
+    border-radius:0;
+}
+
+
+.btn-default {
+  color: $text-color;
+  background-color: #fff;
+  border-color: $border-color;
+
+    &:hover,
+    &:active,
+    &:focus{
+        color:#fff;
+        background-color:$primary;
+        border-color:$primary;
+  }
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: $primary;
+  border-color: $primary;
+
+    &:hover,
+    &:active,
+    &:focus{
+      color:#fff;
+      background-color:lighten($primary, 10%);
+      border-color:lighten($primary, 10%);
+  }
+}
+
