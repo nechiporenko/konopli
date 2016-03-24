@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>News Page</title>
+    <title>Partners Page</title>
     <meta name="description" content="Page Description">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, maximum-scale=1">
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -31,13 +31,13 @@
                         <a href="library.html" class="menu__link">Библиотека</a>
                     </li>
                     <li class="menu__item">
-                        <a href="news.html" class="menu__link current">Новости</a>
+                        <a href="news.html" class="menu__link">Новости</a>
                     </li>
                     <li class="menu__item">
                         <a href="video.html" class="menu__link">Видео</a>
                     </li>
                     <li class="menu__item">
-                        <a href="partners.html" class="menu__link">Партнеры</a>
+                        <a href="partners.html" class="menu__link current">Партнеры</a>
                     </li>
                     <li class="menu__item">
                         <a href="shop.html" class="menu__link">Магазин</a>
@@ -108,122 +108,92 @@
                     </a>
                 </li>
                 <li class="breadcrumbs__item">
-                    Новости
+                    Партнеры
                 </li>
             </ol>
             <!--/BREADCRUMBS END-->
 
             <!--PAGE CONTENT START-->
-            <section class="page__section page__section--compact">
-                
-                <!--PAGE HEADER & BUTTON START-->
+            <article class="page__section page__section--compact">
+                <h1 class="g-title">Партнеры</h1>
+                <span class="g-subtitle">Вы смотрите список наших партнеров</span>
+
+                <h2 class="g-title g-title--alt">Одежда из конопли</h2>
                 <div class="row">
-                    <div class="col-md-4 col-md-offset-4">
-                        <h1 class="g-title">Новости</h1>
-                        <span class="g-subtitle">Воспользуйтесь фильтрами ниже</span>
+                    <figure class="col-sm-3 col-md-2">
+                        <a href="#" rel="nofollow" target="_blank">
+                            <img src="img/partners/partner01.png" alt="Partner" />
+                        </a>
+                    </figure>
+                    <div class="col-sm-9 col-md-10">
+                        <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nullam gravida pharetra elit in lobortis. Praesent eu mattis dolor. Aenean posuere eros purus, vitae feugiat odio ullamcorper et. Aenean vitae tellus venenatis, scelerisque nisi ut, accumsan velit. Duis nec fringilla enim. Praesent et neque nec massa mollis sollicitudin ac eu urna.</p>
+                        <dl class="g-description-list">
+                            <dt>Сайт:</dt>
+                            <dd><a href="#" rel="nofollow" target="_blank">www.site.com</a></dd>
+                        </dl>
                     </div>
-                    <div class="col-md-4">
-                        <a href="news-add-item.html" class="g-btn g-btn--plus"><i class="icon-plus"></i> Добавить новость</a>
-                    </div>
-                </div>
-                <!--/PAGE HEADER & BUTTON END-->
-
-                <!--PAGE FILTERS START-->
-                <ul class="p-filter">
-                    <li class="p-filter__item">
-                        <a href="#" class="p-filter__link current" data-target="tag1">Новости в мире</a>
-                    </li>
-                    <li class="p-filter__item">
-                        <a href="#" class="p-filter__link current" data-target="tag2">Новости компании</a>
-                    </li>
-                    <li class="p-filter__item">
-                        <a href="#" class="p-filter__link" data-target="tag3">Новости от читателей</a>
-                    </li>
-                </ul>
-                <!--/PAGE FILTERS END-->
-
-                <!--GRID START-->
-                <div class="b-grid">
-                    <div class="b-grid__inner js-grid" id="grid" data-columns>
-                        <div class="b-grid__item" data-target="tag1">
-                            <figure class="b-item">
-                                <a href="news-item.html" class="b-item__link">
-                                    <img src="http://placehold.it/300x288" class="b-item__img" alt="Book">
-                                </a>
-                                <figcaption class="b-item__description">
-                                    <a href="news-item.html" class="b-item__title">Заголовок статьи или название новости</a>
-                                    <p class="b-item__subtitle">Краткое описание статьи или книги, которое заинтересует пользоателя и он прочтет ее полностью. Cras et tempor ligula, sit amet imperdiet mi. Aliquam nunc risus, placerat et lacinia ac, eleifend ac tortor. Cras et odio nisl. Donec sodales risus quis nulla viverra, eget cursus velit mattis. Vestibulum volutpat sapien ultrices est laoreet, ut lacinia elit molestie. Nulla dictum rutrum tempor. Nam a vestibulum elit, at aliquam est. Duis justo magna, ornare sit amet faucibus at, tristique quis velit …</p>
-                                </figcaption>
-                            </figure>
-                        </div>
-                        <div class="b-grid__item" data-target="tag2">
-                            <figure class="b-item">
-                                <a href="news-item.html" class="b-item__link">
-                                    <img src="http://placehold.it/300x288" class="b-item__img" alt="Book">
-                                </a>
-                                <figcaption class="b-item__description">
-                                    <a href="news-item.html" class="b-item__title">Название книги</a>
-                                    <p class="b-item__subtitle">Краткое описание статьи или книги, которое заинтересует пользоателя и он прочтет ее полностью. Cras et tempor ligula, sit amet imperdiet mi. Aliquam nunc risus, placerat et lacinia ac, eleifend ac tortor. Cras et odio nisl. Nam a vestibulum elit, at aliquam est. Duis justo magna, ornare sit amet faucibus at, tristique quis velit …</p>
-                                </figcaption>
-                            </figure>
-                        </div>
-                        <div class="b-grid__item" data-target="tag3">
-                            <figure class="b-item">
-                                <a href="news-item.html" class="b-item__link">
-                                    <img src="http://placehold.it/300x288" class="b-item__img" alt="Book">
-                                </a>
-                                <figcaption class="b-item__description">
-                                    <a href="news-item.html" class="b-item__title">Заголовок статьи или название новости</a>
-                                    <p class="b-item__subtitle">Краткое описание статьи или книги, которое заинтересует пользоателя и он прочтет ее полностью. Cras et tempor ligula, sit amet imperdiet mi. Aliquam nunc risus, placerat et lacinia ac, eleifend ac tortor. Cras et odio nisl. Donec sodales risus quis nulla viverra, eget cursus velit mattis. Vestibulum volutpat sapien ultrices est laoreet, ut lacinia elit molestie. Nulla dictum rutrum tempor. Nam a vestibulum elit, at aliquam est. Duis justo magna, ornare sit amet faucibus at, tristique quis velit …</p>
-                                </figcaption>
-                            </figure>
-                        </div>
-                        <div class="b-grid__item" data-target="tag2">
-                            <figure class="b-item">
-                                <a href="news-item.html" class="b-item__link">
-                                    <img src="http://placehold.it/300x288" class="b-item__img" alt="Book">
-                                </a>
-                                <figcaption class="b-item__description">
-                                    <a href="news-item.html" class="b-item__title">Название книги</a>
-                                    <p class="b-item__subtitle">Краткое описание статьи или книги, которое заинтересует пользоателя и он прочтет ее полностью. Cras et tempor ligula, sit amet imperdiet mi. Aliquam nunc risus, placerat et lacinia ac, eleifend ac tortor. Cras et odio nisl. Nam a vestibulum elit, at aliquam est. Duis justo magna, ornare sit amet faucibus at, tristique quis velit …</p>
-                                </figcaption>
-                            </figure>
-                        </div>
-                        <div class="b-grid__item" data-target="tag1">
-                            <figure class="b-item">
-                                <a href="news-item.html" class="b-item__link">
-                                    <img src="http://placehold.it/300x288" class="b-item__img" alt="Book">
-                                </a>
-                                <figcaption class="b-item__description">
-                                    <a href="news-item.html" class="b-item__title">Название книги</a>
-                                    <p class="b-item__subtitle">Краткое описание статьи или книги, которое заинтересует пользоателя и он прочтет ее полностью. Cras et tempor ligula, sit amet imperdiet mi. Aliquam nunc risus, placerat et lacinia ac, eleifend ac tortor. Cras et odio nisl. Nam a vestibulum elit, at aliquam est. Duis justo magna, ornare sit amet faucibus at, tristique quis velit …</p>
-                                </figcaption>
-                            </figure>
-                        </div>
-                        <div class="b-grid__item" data-target="tag3">
-                            <figure class="b-item">
-                                <a href="news-item.html" class="b-item__link">
-                                    <img src="http://placehold.it/300x288" class="b-item__img" alt="Book">
-                                </a>
-                                <figcaption class="b-item__description">
-                                    <a href="news-item.html" class="b-item__title">Название книги</a>
-                                    <p class="b-item__subtitle">Краткое описание статьи или книги, которое заинтересует пользоателя и он прочтет ее полностью. Cras et tempor ligula, sit amet imperdiet mi. Aliquam nunc risus, placerat et lacinia ac, eleifend ac tortor. Cras et odio nisl. Nam a vestibulum elit, at aliquam est. Duis justo magna, ornare sit amet faucibus at, tristique quis velit …</p>
-                                </figcaption>
-                            </figure>
-                        </div>
-                    </div>
-                </div>
-                <div class="g-hidden" id="hidden"></div>
-                <!--/GRID END-->
-
-                <!--MORE BUTTON START-->
+                </div><!--/row-->
                 <div class="row">
-                    <div class="col-sm-4 col-sm-offset-4">
-                        <button type="button" class="g-btn g-full-width" id="load">Показать еще</button>
+                    <figure class="col-sm-3 col-md-2">
+                        <a href="#" rel="nofollow" target="_blank">
+                            <img src="img/partners/partner02.png" alt="Partner" />
+                        </a>
+                    </figure>
+                    <div class="col-sm-9 col-md-10">
+                        <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nullam gravida pharetra elit in lobortis. Praesent eu mattis dolor. Aenean posuere eros purus, vitae feugiat odio ullamcorper et. Aenean vitae tellus venenatis, scelerisque nisi ut, accumsan velit. Duis nec fringilla enim. Praesent et neque nec massa mollis sollicitudin ac eu urna.</p>
+                        <dl class="g-description-list">
+                            <dt>Сайт:</dt>
+                            <dd><a href="#" rel="nofollow" target="_blank">www.site.com</a></dd>
+                        </dl>
                     </div>
-                </div>
-                <!--/MORE BUTTON END-->
-            </section>
+                </div><!--/row-->
+
+                <p>&nbsp;</p>
+
+                <h2 class="g-title g-title--alt">Общественные организации</h2>
+                <div class="row">
+                    <figure class="col-sm-3 col-md-2">
+                        <a href="#" rel="nofollow" target="_blank">
+                            <img src="img/partners/partner04.png" alt="Partner" />
+                        </a>
+                    </figure>
+                    <div class="col-sm-9 col-md-10">
+                        <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nullam gravida pharetra elit in lobortis. Praesent eu mattis dolor. Aenean posuere eros purus, vitae feugiat odio ullamcorper et. Aenean vitae tellus venenatis, scelerisque nisi ut, accumsan velit. Duis nec fringilla enim. Praesent et neque nec massa mollis sollicitudin ac eu urna.</p>
+                        <dl class="g-description-list">
+                            <dt>Сайт:</dt>
+                            <dd><a href="#" rel="nofollow" target="_blank">www.site.com</a></dd>
+                        </dl>
+                    </div>
+                </div><!--/row-->
+                <div class="row">
+                    <figure class="col-sm-3 col-md-2">
+                        <a href="#" rel="nofollow" target="_blank">
+                            <img src="img/partners/partner05.png" alt="Partner" />
+                        </a>
+                    </figure>
+                    <div class="col-sm-9 col-md-10">
+                        <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nullam gravida pharetra elit in lobortis. Praesent eu mattis dolor. Aenean posuere eros purus, vitae feugiat odio ullamcorper et. Aenean vitae tellus venenatis, scelerisque nisi ut, accumsan velit. Duis nec fringilla enim. Praesent et neque nec massa mollis sollicitudin ac eu urna.</p>
+                        <dl class="g-description-list">
+                            <dt>Сайт:</dt>
+                            <dd><a href="#" rel="nofollow" target="_blank">www.site.com</a></dd>
+                        </dl>
+                    </div>
+                </div><!--/row-->
+                <div class="row">
+                    <figure class="col-sm-3 col-md-2">
+                        <a href="#" rel="nofollow" target="_blank">
+                            <img src="img/partners/partner06.png" alt="Partner" />
+                        </a>
+                    </figure>
+                    <div class="col-sm-9 col-md-10">
+                        <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nullam gravida pharetra elit in lobortis. Praesent eu mattis dolor. Aenean posuere eros purus, vitae feugiat odio ullamcorper et. Aenean vitae tellus venenatis, scelerisque nisi ut, accumsan velit. Duis nec fringilla enim. Praesent et neque nec massa mollis sollicitudin ac eu urna.</p>
+                        <dl class="g-description-list">
+                            <dt>Сайт:</dt>
+                            <dd><a href="#" rel="nofollow" target="_blank">www.site.com</a></dd>
+                        </dl>
+                    </div>
+                </div><!--/row-->
+            </article>
             <!--/PAGE CONTENT END-->
 
             <div class="page__section">
@@ -329,13 +299,13 @@
                 <a href="library.html" class="m-menu__link">Библиотека</a>
             </li>
             <li class="m-menu__item">
-                <a href="news.html" class="m-menu__link current">Новости</a>
+                <a href="news.html" class="m-menu__link">Новости</a>
             </li>
             <li class="m-menu__item">
                 <a href="video.html" class="m-menu__link">Видео</a>
             </li>
             <li class="m-menu__item">
-                <a href="partners.html" class="m-menu__link">Партнеры</a>
+                <a href="partners.html" class="m-menu__link current">Партнеры</a>
             </li>
             <li class="m-menu__item">
                 <a href="shop.html" class="m-menu__link">Магазин</a>
@@ -462,42 +432,5 @@
     <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\/script>')</script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/app.min.js"></script>
-
-    <!--SALVATTTORE SCRIPT START-->
-    <script src="js/vendor/salvattore.min.js"></script>
-    <!--/SALVATTTORE SCRIPT END-->
-
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {//пример ajax-загрузки контента в сетку
-            var grid = document.getElementById('grid'),
-                button = document.getElementById('load'),
-                method = {};
-
-            method.loadItems = function () {
-                var request = new XMLHttpRequest();
-                request.open('GET', 'del/ajax.html', true);
-
-                request.onload = function () {
-                    if (request.status >= 200 && request.status < 400) {
-                        // Success!
-                        var resp = document.getElementById('hidden');
-                        resp.innerHTML = request.responseText;
-                        var newItems = resp.querySelectorAll('.b-grid__item');
-                        salvattore.appendElements(grid, newItems);
-                        resp.innerHTML = '';
-                    } else {
-                        // We reached our target server, but it returned an error...
-                    }
-                };
-                request.onerror = function () {
-                    // There was a connection error of some sort...
-                };
-
-                request.send();
-            };
-
-            button.addEventListener('click', method.loadItems);
-        });
-    </script>
 </body>
 </html>

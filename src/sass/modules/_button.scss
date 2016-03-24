@@ -65,3 +65,26 @@
         }
     }
 }
+
+
+.g-btn--plus{//кнопка Добавить новость
+    margin-bottom:15px;
+    color:$text-color;
+    border-color:$text-color;
+
+    &:hover,
+    &:active,
+    &:focus{
+        border-color:$primary;
+    }
+
+    [class^="icon-"]:before, [class*=" icon-"]:before{
+        @include font-size(20px);
+        margin:0;
+        vertical-align:middle;
+    }
+
+    @include media($tablet){
+        float:right;
+    }
+}

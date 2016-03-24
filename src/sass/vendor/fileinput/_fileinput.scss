@@ -8,12 +8,17 @@
         background:$primary;
         outline:0;
         border-radius:0;
+        text-transform:uppercase;
         @include transition(all .15s ease-in);
 
         &:hover,
         &:active{
             background:lighten($primary, 10%);
             border-color:lighten($primary, 10%);
+        }
+
+        .span-filestyle{
+            margin-right:5px;
         }
     }
 

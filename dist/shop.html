@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>News Page</title>
+    <title>Shop Page</title>
     <meta name="description" content="Page Description">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, maximum-scale=1">
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -31,7 +31,7 @@
                         <a href="library.html" class="menu__link">Библиотека</a>
                     </li>
                     <li class="menu__item">
-                        <a href="news.html" class="menu__link current">Новости</a>
+                        <a href="news.html" class="menu__link">Новости</a>
                     </li>
                     <li class="menu__item">
                         <a href="video.html" class="menu__link">Видео</a>
@@ -40,7 +40,7 @@
                         <a href="partners.html" class="menu__link">Партнеры</a>
                     </li>
                     <li class="menu__item">
-                        <a href="shop.html" class="menu__link">Магазин</a>
+                        <a href="shop.html" class="menu__link current">Магазин</a>
                     </li>
                     <li class="menu__item menu__item--show-xs">
                         <a href="#" hreflang="uk" class="lang-switcher">
@@ -100,129 +100,113 @@
     <!--MAIN CONTENT START-->
     <main class="page__content">
         <div class="container">
-            <!--BREADCRUMBS START-->
-            <ol class="breadcrumbs">
-                <li class="breadcrumbs__item" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
-                    <a href="index.html" class="breadcrumbs__link" itemprop="url">
-                        <span itemprop="title" class="breadcrumbs__inner">Главная</span>
+
+            <div class="row">
+                <div class="col-xs-9 col-sm-9 col-md-10">
+                    <!--BREADCRUMBS START-->
+                    <ol class="breadcrumbs">
+                        <li class="breadcrumbs__item" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                            <a href="index.html" class="breadcrumbs__link" itemprop="url">
+                                <span itemprop="title" class="breadcrumbs__inner">Главная</span>
+                            </a>
+                        </li>
+                        <li class="breadcrumbs__item">
+                            Магазин
+                        </li>
+                    </ol>
+                    <!--/BREADCRUMBS END-->
+                </div>
+                <div class="col-xs-3 col-sm-3 col-md-2">
+                    <!--CART LINK START-->
+                    <a href="cart.html" class="b-cart-link active">
+                        <i class="icomoon-cart"></i>
+                        <span class="b-cart-link__text">Корзина</span>
+                        <span class="b-cart-link__count">2</span>
                     </a>
-                </li>
-                <li class="breadcrumbs__item">
-                    Новости
-                </li>
-            </ol>
-            <!--/BREADCRUMBS END-->
+                    <!--/CART LINK END-->
+                </div>
+            </div><!--/row-->
+            
 
             <!--PAGE CONTENT START-->
             <section class="page__section page__section--compact">
+                <h1 class="g-title">Магазин</h1>
+                <span class="g-subtitle">Выберите интересующий вас раздел</span>
                 
-                <!--PAGE HEADER & BUTTON START-->
-                <div class="row">
-                    <div class="col-md-4 col-md-offset-4">
-                        <h1 class="g-title">Новости</h1>
-                        <span class="g-subtitle">Воспользуйтесь фильтрами ниже</span>
-                    </div>
-                    <div class="col-md-4">
-                        <a href="news-add-item.html" class="g-btn g-btn--plus"><i class="icon-plus"></i> Добавить новость</a>
-                    </div>
-                </div>
-                <!--/PAGE HEADER & BUTTON END-->
-
-                <!--PAGE FILTERS START-->
-                <ul class="p-filter">
-                    <li class="p-filter__item">
-                        <a href="#" class="p-filter__link current" data-target="tag1">Новости в мире</a>
+                <!--GRID-LIST START-->
+                <ul class="grid-list">
+                    <li class="grid-list__item">
+                        <figure class="b-item">
+                            <a href="catalog.html" class="b-item__link">
+                                <img src="http://placehold.it/300x288" class="b-item__img" alt="Catalog">
+                            </a>
+                            <figcaption class="b-item__description">
+                                <a href="catalog.html" class="b-item__title">Изделия из конопли</a>
+                            </figcaption>
+                        </figure>
                     </li>
-                    <li class="p-filter__item">
-                        <a href="#" class="p-filter__link current" data-target="tag2">Новости компании</a>
+                    <li class="grid-list__item">
+                        <figure class="b-item">
+                            <a href="catalog.html" class="b-item__link">
+                                <img src="http://placehold.it/300x288" class="b-item__img" alt="Catalog">
+                            </a>
+                            <figcaption class="b-item__description">
+                                <a href="catalog.html" class="b-item__title">Косметика из конопли</a>
+                            </figcaption>
+                        </figure>
                     </li>
-                    <li class="p-filter__item">
-                        <a href="#" class="p-filter__link" data-target="tag3">Новости от читателей</a>
+                    <li class="grid-list__item">
+                        <figure class="b-item">
+                            <a href="catalog.html" class="b-item__link">
+                                <img src="http://placehold.it/300x288" class="b-item__img" alt="Catalog">
+                            </a>
+                            <figcaption class="b-item__description">
+                                <a href="catalog.html" class="b-item__title">Удобрения для конопли</a>
+                            </figcaption>
+                        </figure>
+                    </li>
+                    <li class="grid-list__item">
+                        <figure class="b-item">
+                            <a href="catalog.html" class="b-item__link">
+                                <img src="http://placehold.it/300x288" class="b-item__img" alt="Catalog">
+                            </a>
+                            <figcaption class="b-item__description">
+                                <a href="catalog.html" class="b-item__title">Оборудование для выращивания конопли</a>
+                            </figcaption>
+                        </figure>
+                    </li>
+                    <li class="grid-list__item">
+                        <figure class="b-item">
+                            <a href="catalog.html" class="b-item__link">
+                                <img src="http://placehold.it/300x288" class="b-item__img" alt="Catalog">
+                            </a>
+                            <figcaption class="b-item__description">
+                                <a href="catalog.html" class="b-item__title">Еда из конопли</a>
+                            </figcaption>
+                        </figure>
+                    </li>
+                    <li class="grid-list__item">
+                        <figure class="b-item">
+                            <a href="catalog.html" class="b-item__link">
+                                <img src="http://placehold.it/300x288" class="b-item__img" alt="Catalog">
+                            </a>
+                            <figcaption class="b-item__description">
+                                <a href="catalog.html" class="b-item__title">Семена конопли</a>
+                            </figcaption>
+                        </figure>
+                    </li>
+                    <li class="grid-list__item">
+                        <figure class="b-item">
+                            <a href="catalog.html" class="b-item__link">
+                                <img src="http://placehold.it/300x288" class="b-item__img" alt="Catalog">
+                            </a>
+                            <figcaption class="b-item__description">
+                                <a href="catalog.html" class="b-item__title">Сувениры для курения</a>
+                            </figcaption>
+                        </figure>
                     </li>
                 </ul>
-                <!--/PAGE FILTERS END-->
-
-                <!--GRID START-->
-                <div class="b-grid">
-                    <div class="b-grid__inner js-grid" id="grid" data-columns>
-                        <div class="b-grid__item" data-target="tag1">
-                            <figure class="b-item">
-                                <a href="news-item.html" class="b-item__link">
-                                    <img src="http://placehold.it/300x288" class="b-item__img" alt="Book">
-                                </a>
-                                <figcaption class="b-item__description">
-                                    <a href="news-item.html" class="b-item__title">Заголовок статьи или название новости</a>
-                                    <p class="b-item__subtitle">Краткое описание статьи или книги, которое заинтересует пользоателя и он прочтет ее полностью. Cras et tempor ligula, sit amet imperdiet mi. Aliquam nunc risus, placerat et lacinia ac, eleifend ac tortor. Cras et odio nisl. Donec sodales risus quis nulla viverra, eget cursus velit mattis. Vestibulum volutpat sapien ultrices est laoreet, ut lacinia elit molestie. Nulla dictum rutrum tempor. Nam a vestibulum elit, at aliquam est. Duis justo magna, ornare sit amet faucibus at, tristique quis velit …</p>
-                                </figcaption>
-                            </figure>
-                        </div>
-                        <div class="b-grid__item" data-target="tag2">
-                            <figure class="b-item">
-                                <a href="news-item.html" class="b-item__link">
-                                    <img src="http://placehold.it/300x288" class="b-item__img" alt="Book">
-                                </a>
-                                <figcaption class="b-item__description">
-                                    <a href="news-item.html" class="b-item__title">Название книги</a>
-                                    <p class="b-item__subtitle">Краткое описание статьи или книги, которое заинтересует пользоателя и он прочтет ее полностью. Cras et tempor ligula, sit amet imperdiet mi. Aliquam nunc risus, placerat et lacinia ac, eleifend ac tortor. Cras et odio nisl. Nam a vestibulum elit, at aliquam est. Duis justo magna, ornare sit amet faucibus at, tristique quis velit …</p>
-                                </figcaption>
-                            </figure>
-                        </div>
-                        <div class="b-grid__item" data-target="tag3">
-                            <figure class="b-item">
-                                <a href="news-item.html" class="b-item__link">
-                                    <img src="http://placehold.it/300x288" class="b-item__img" alt="Book">
-                                </a>
-                                <figcaption class="b-item__description">
-                                    <a href="news-item.html" class="b-item__title">Заголовок статьи или название новости</a>
-                                    <p class="b-item__subtitle">Краткое описание статьи или книги, которое заинтересует пользоателя и он прочтет ее полностью. Cras et tempor ligula, sit amet imperdiet mi. Aliquam nunc risus, placerat et lacinia ac, eleifend ac tortor. Cras et odio nisl. Donec sodales risus quis nulla viverra, eget cursus velit mattis. Vestibulum volutpat sapien ultrices est laoreet, ut lacinia elit molestie. Nulla dictum rutrum tempor. Nam a vestibulum elit, at aliquam est. Duis justo magna, ornare sit amet faucibus at, tristique quis velit …</p>
-                                </figcaption>
-                            </figure>
-                        </div>
-                        <div class="b-grid__item" data-target="tag2">
-                            <figure class="b-item">
-                                <a href="news-item.html" class="b-item__link">
-                                    <img src="http://placehold.it/300x288" class="b-item__img" alt="Book">
-                                </a>
-                                <figcaption class="b-item__description">
-                                    <a href="news-item.html" class="b-item__title">Название книги</a>
-                                    <p class="b-item__subtitle">Краткое описание статьи или книги, которое заинтересует пользоателя и он прочтет ее полностью. Cras et tempor ligula, sit amet imperdiet mi. Aliquam nunc risus, placerat et lacinia ac, eleifend ac tortor. Cras et odio nisl. Nam a vestibulum elit, at aliquam est. Duis justo magna, ornare sit amet faucibus at, tristique quis velit …</p>
-                                </figcaption>
-                            </figure>
-                        </div>
-                        <div class="b-grid__item" data-target="tag1">
-                            <figure class="b-item">
-                                <a href="news-item.html" class="b-item__link">
-                                    <img src="http://placehold.it/300x288" class="b-item__img" alt="Book">
-                                </a>
-                                <figcaption class="b-item__description">
-                                    <a href="news-item.html" class="b-item__title">Название книги</a>
-                                    <p class="b-item__subtitle">Краткое описание статьи или книги, которое заинтересует пользоателя и он прочтет ее полностью. Cras et tempor ligula, sit amet imperdiet mi. Aliquam nunc risus, placerat et lacinia ac, eleifend ac tortor. Cras et odio nisl. Nam a vestibulum elit, at aliquam est. Duis justo magna, ornare sit amet faucibus at, tristique quis velit …</p>
-                                </figcaption>
-                            </figure>
-                        </div>
-                        <div class="b-grid__item" data-target="tag3">
-                            <figure class="b-item">
-                                <a href="news-item.html" class="b-item__link">
-                                    <img src="http://placehold.it/300x288" class="b-item__img" alt="Book">
-                                </a>
-                                <figcaption class="b-item__description">
-                                    <a href="news-item.html" class="b-item__title">Название книги</a>
-                                    <p class="b-item__subtitle">Краткое описание статьи или книги, которое заинтересует пользоателя и он прочтет ее полностью. Cras et tempor ligula, sit amet imperdiet mi. Aliquam nunc risus, placerat et lacinia ac, eleifend ac tortor. Cras et odio nisl. Nam a vestibulum elit, at aliquam est. Duis justo magna, ornare sit amet faucibus at, tristique quis velit …</p>
-                                </figcaption>
-                            </figure>
-                        </div>
-                    </div>
-                </div>
-                <div class="g-hidden" id="hidden"></div>
-                <!--/GRID END-->
-
-                <!--MORE BUTTON START-->
-                <div class="row">
-                    <div class="col-sm-4 col-sm-offset-4">
-                        <button type="button" class="g-btn g-full-width" id="load">Показать еще</button>
-                    </div>
-                </div>
-                <!--/MORE BUTTON END-->
+                <!--/GRID-LIST END-->
             </section>
             <!--/PAGE CONTENT END-->
 
@@ -329,7 +313,7 @@
                 <a href="library.html" class="m-menu__link">Библиотека</a>
             </li>
             <li class="m-menu__item">
-                <a href="news.html" class="m-menu__link current">Новости</a>
+                <a href="news.html" class="m-menu__link">Новости</a>
             </li>
             <li class="m-menu__item">
                 <a href="video.html" class="m-menu__link">Видео</a>
@@ -338,7 +322,7 @@
                 <a href="partners.html" class="m-menu__link">Партнеры</a>
             </li>
             <li class="m-menu__item">
-                <a href="shop.html" class="m-menu__link">Магазин</a>
+                <a href="shop.html" class="m-menu__link current">Магазин</a>
             </li>
             <li class="m-menu__divider"></li>
             <li class="m-menu__item">
@@ -462,42 +446,5 @@
     <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\/script>')</script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/app.min.js"></script>
-
-    <!--SALVATTTORE SCRIPT START-->
-    <script src="js/vendor/salvattore.min.js"></script>
-    <!--/SALVATTTORE SCRIPT END-->
-
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {//пример ajax-загрузки контента в сетку
-            var grid = document.getElementById('grid'),
-                button = document.getElementById('load'),
-                method = {};
-
-            method.loadItems = function () {
-                var request = new XMLHttpRequest();
-                request.open('GET', 'del/ajax.html', true);
-
-                request.onload = function () {
-                    if (request.status >= 200 && request.status < 400) {
-                        // Success!
-                        var resp = document.getElementById('hidden');
-                        resp.innerHTML = request.responseText;
-                        var newItems = resp.querySelectorAll('.b-grid__item');
-                        salvattore.appendElements(grid, newItems);
-                        resp.innerHTML = '';
-                    } else {
-                        // We reached our target server, but it returned an error...
-                    }
-                };
-                request.onerror = function () {
-                    // There was a connection error of some sort...
-                };
-
-                request.send();
-            };
-
-            button.addEventListener('click', method.loadItems);
-        });
-    </script>
 </body>
 </html>

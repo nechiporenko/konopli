@@ -28,13 +28,12 @@
     @include transition(all .15s ease-in);
 
     &:after{
-        content:'';
+        content:'\e901';
+        font-family:'icomoon';
         display:none;
-        @include size(12px);
         position:absolute;
         top:9px;
         right:30px;
-        background:url(../img/cross.svg) no-repeat;
     }
 
     &:hover,
@@ -60,11 +59,6 @@
     }
 }
 
-.no-svg .p-filter__link{
-    &:after{
-        background:url(../img/fallback/cross.png) no-repeat;
-    }
-}
 
 .p-filter__btn{
     @extend .g-btn;

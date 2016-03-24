@@ -1,0 +1,59 @@
+﻿@import "../../modules/_base.scss";
+/*Cart Link*/
+.b-cart-link{
+    float:right;
+    margin-top:15px;
+    text-decoration:none !important;
+    color:$text-color;
+    @include font-size(24px);
+    line-height:1;
+    position:relative;
+    cursor:default;
+
+    &:hover,
+    &:active{
+        color:$text-color;
+    }
+
+    &.active{
+        color:$primary;
+        cursor:pointer;
+
+        .b-cart-link__count{
+            display:block;
+        }
+
+        &:hover,
+        &:active{
+            .b-cart-link__text{
+                text-decoration:underline;
+            }
+        }
+    }
+}
+
+.b-cart-link__text{
+    @include font-size(14px);
+    text-transform:uppercase;
+    font-family:$font-light;
+    font-weight:300;
+    display:none;
+    @include media($tablet){
+        display:inline-block;
+        vertical-align:middle;
+    }
+}
+
+.b-cart-link__count{
+    display:none;
+    @include size(14px);
+    line-height:14px;
+    text-align:center;
+    @include font-size(10px);
+    color:#fff;
+    background:$primary;
+    border-radius:50%;
+    position:absolute;
+    top:0; left:10px;
+    overflow:hidden;
+}
