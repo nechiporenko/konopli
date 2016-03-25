@@ -1,0 +1,11 @@
+﻿@import "../../modules/_base.scss";
+/*Filters (checkboxes) list*/
+.filter-list{
+    list-style-type:none;
+    padding:0;
+    margin-bottom:2*$project-line-height;
+
+    li{
+        margin-bottom:10px;
+    }
+}

@@ -1,0 +1,30 @@
+﻿@import "../../modules/_base.scss";
+/*Pagination*/
+.b-pagination{
+    margin:2*$project-line-height 0 $project-line-height;
+    font-size:0;
+    text-align:center;
+}
+.b-pagination__item{
+    display:inline-block;
+    margin:0 3px;
+    height:36px;
+    line-height:36px;
+    width:36px;
+    @include font-size(14px);
+    color:$title-color;
+    text-decoration:none !important;
+    text-align:center;
+
+    &:hover,
+    &:active{
+        background:$primary;
+        color:#fff;
+    }
+
+    &.current{
+        background:$primary;
+        color:#fff;
+        cursor:default;
+    }
+}

@@ -100,23 +100,37 @@
     <!--MAIN CONTENT START-->
     <main class="page__content">
         <div class="container">
-            <!--BREADCRUMBS START-->
-            <ol class="breadcrumbs">
-                <li class="breadcrumbs__item" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
-                    <a href="index.html" class="breadcrumbs__link" itemprop="url">
-                        <span itemprop="title" class="breadcrumbs__inner">Главная</span>
+            
+            <div class="row">
+                <div class="col-xs-9 col-sm-9 col-md-10">
+                    <!--BREADCRUMBS START-->
+                    <ol class="breadcrumbs">
+                        <li class="breadcrumbs__item" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                            <a href="index.html" class="breadcrumbs__link" itemprop="url">
+                                <span itemprop="title" class="breadcrumbs__inner">Главная</span>
+                            </a>
+                        </li>
+                        <li class="breadcrumbs__item" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                            <a href="shop.html" class="breadcrumbs__link" itemprop="url">
+                                <span itemprop="title" class="breadcrumbs__inner">Магазин</span>
+                            </a>
+                        </li>
+                        <li class="breadcrumbs__item">
+                            Удобрения для конопли
+                        </li>
+                    </ol>
+                    <!--/BREADCRUMBS END-->
+                </div>
+                <div class="col-xs-3 col-sm-3 col-md-2">
+                    <!--CART LINK START-->
+                    <a href="cart.html" class="b-cart-link">
+                        <i class="icomoon-cart"></i>
+                        <span class="b-cart-link__text">Корзина</span>
+                        <span class="b-cart-link__count">2</span>
                     </a>
-                </li>
-                <li class="breadcrumbs__item" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
-                    <a href="shop.html" class="breadcrumbs__link" itemprop="url">
-                        <span itemprop="title" class="breadcrumbs__inner">Магазин</span>
-                    </a>
-                </li>
-                <li class="breadcrumbs__item">
-                    Удобрения для конопли
-                </li>
-            </ol>
-            <!--/BREADCRUMBS END-->
+                    <!--/CART LINK END-->
+                </div>
+            </div><!--/row-->
 
             <!--PAGE CONTENT START-->
             <section class="page__section page__section--compact">
@@ -133,7 +147,7 @@
                                 <div class="input-group">
                                     <input type="text" class="form-control js-search" placeholder="Начните вводить слово...">
                                     <span class="input-group-btn">
-                                        <button class="btn btn-default" type="button"><i class="glyphicon glyphicon-search"></i></button>
+                                        <button class="btn btn-default" type="button" id="example"><i class="glyphicon glyphicon-search"></i></button>
                                     </span>
                                 </div><!-- /input-group -->
                             </div>
@@ -142,18 +156,177 @@
                             var searchComplete = ['Конопля', 'Удобрение', 'Ghe', 'Floragro', 'Floramicro', 'Floraloom', 'Минеральное удобрение'];
                         </script>
                         <!--/SEARCH END-->
+                        <label class="g-title g-title--alt">Фильтр</label>
+                        <select class="g-select js-select">
+                            <option selected disabled>- выбрать из списка -</option>
+                            <option value="1">выбор 1</option>
+                            <option value="2">выбор 2, с каим-то очень длинным названием</option>
+                            <option value="3">выбор 3</option>
+                        </select>
+
+                        <ul class="filter-list">
+                            <li>
+                                <input type="checkbox" class="css-checkbox" id="chk01" checked />
+                                <label class="css-label" for="chk01">Пункт первый</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" class="css-checkbox" id="chk02" />
+                                <label class="css-label" for="chk02">Пункт второй, с каким-то невероятно длинным названием</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" class="css-checkbox" id="chk03" />
+                                <label class="css-label" for="chk03">Пункт третий</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" class="css-checkbox" id="chk04" />
+                                <label class="css-label" for="chk04">Пункт четвертый</label>
+                            </li>
+                        </ul>
                     </aside>
                     <!--/SIDEBAR FILTERS END-->
+
+                    <!--RIGHT COLUMN START-->
                     <div class="col-sm-8 col-md-9">
-                        2
+                        <!--PRODUCTS LIST START-->
+                        <ul class="product-list">
+                            <li class="product-list__item">
+                                <figure class="b-product">
+                                    <a href="product.html" class="b-product__link">
+                                        <img src="img/product/product-01.png" class="b-product__img" alt="Product" />
+                                    </a>
+                                    <figcaption class="b-product__content">
+                                        <a href="product.html" class="b-product__title">Минеральное удобрение GHE FloraGro 500ml</a>
+                                        <span class="b-product__price">157.07 <span class="b-product__curr">грн</span></span>
+                                        <button type="button" class="b-product__btn">Заказать</button>
+                                    </figcaption>
+                                </figure>
+                            </li>
+                            <li class="product-list__item">
+                                <figure class="b-product">
+                                    <a href="product.html" class="b-product__link">
+                                        <img src="img/product/product-02.png" class="b-product__img" alt="Product" />
+                                    </a>
+                                    <figcaption class="b-product__content">
+                                        <a href="product.html" class="b-product__title">Минеральное удобрение GHE FloraLomm 500ml</a>
+                                        <span class="b-product__price">184.05 <span class="b-product__curr">грн</span></span>
+                                        <button type="button" class="b-product__btn">Заказать</button>
+                                    </figcaption>
+                                </figure>
+                            </li>
+                            <li class="product-list__item">
+                                <figure class="b-product">
+                                    <a href="product.html" class="b-product__link">
+                                        <img src="img/product/product-03.png" class="b-product__img" alt="Product" />
+                                    </a>
+                                    <figcaption class="b-product__content">
+                                        <a href="product.html" class="b-product__title">Минеральное удобрение GHE FloraMicro 500ml</a>
+                                        <span class="b-product__price">1157.07 <span class="b-product__curr">грн</span></span>
+                                        <button type="button" class="b-product__btn">Заказать</button>
+                                    </figcaption>
+                                </figure>
+                            </li>
+                            <li class="product-list__item">
+                                <figure class="b-product">
+                                    <a href="product.html" class="b-product__link">
+                                        <img src="img/product/product-04.png" class="b-product__img" alt="Product" />
+                                    </a>
+                                    <figcaption class="b-product__content">
+                                        <a href="product.html" class="b-product__title">Минеральное удобрение GHE FloraMacro 500ml</a>
+                                        <span class="b-product__price">3557.07 <span class="b-product__curr">грн</span></span>
+                                        <button type="button" class="b-product__btn">Заказать</button>
+                                    </figcaption>
+                                </figure>
+                            </li>
+                            <li class="product-list__item">
+                                <figure class="b-product">
+                                    <a href="product.html" class="b-product__link">
+                                        <img src="img/product/product-01.png" class="b-product__img" alt="Product" />
+                                    </a>
+                                    <figcaption class="b-product__content">
+                                        <a href="product.html" class="b-product__title">Минеральное удобрение GHE FloraNPK 500ml и еще какой-то текст</a>
+                                        <span class="b-product__price">229.07 <span class="b-product__curr">грн</span></span>
+                                        <button type="button" class="b-product__btn">Заказать</button>
+                                    </figcaption>
+                                </figure>
+                            </li>
+                            <li class="product-list__item">
+                                <figure class="b-product">
+                                    <a href="product.html" class="b-product__link">
+                                        <img src="img/product/product-02.png" class="b-product__img" alt="Product" />
+                                    </a>
+                                    <figcaption class="b-product__content">
+                                        <a href="product.html" class="b-product__title">Минеральное удобрение GHE FloraFerro 500ml</a>
+                                        <span class="b-product__price">50.05 <span class="b-product__curr">грн</span></span>
+                                        <button type="button" class="b-product__btn">Заказать</button>
+                                    </figcaption>
+                                </figure>
+                            </li>
+                            <li class="product-list__item">
+                                <figure class="b-product">
+                                    <a href="product.html" class="b-product__link">
+                                        <img src="img/product/product-01.png" class="b-product__img" alt="Product" />
+                                    </a>
+                                    <figcaption class="b-product__content">
+                                        <a href="product.html" class="b-product__title">Минеральное удобрение GHE FloraGro 500ml</a>
+                                        <span class="b-product__price">157.07 <span class="b-product__curr">грн</span></span>
+                                        <button type="button" class="b-product__btn">Заказать</button>
+                                    </figcaption>
+                                </figure>
+                            </li>
+                            <li class="product-list__item">
+                                <figure class="b-product">
+                                    <a href="product.html" class="b-product__link">
+                                        <img src="img/product/product-02.png" class="b-product__img" alt="Product" />
+                                    </a>
+                                    <figcaption class="b-product__content">
+                                        <a href="product.html" class="b-product__title">Минеральное удобрение GHE FloraLomm 500ml</a>
+                                        <span class="b-product__price">184.05 <span class="b-product__curr">грн</span></span>
+                                        <button type="button" class="b-product__btn">Заказать</button>
+                                    </figcaption>
+                                </figure>
+                            </li>
+                            <li class="product-list__item">
+                                <figure class="b-product">
+                                    <a href="product.html" class="b-product__link">
+                                        <img src="img/product/product-03.png" class="b-product__img" alt="Product" />
+                                    </a>
+                                    <figcaption class="b-product__content">
+                                        <a href="product.html" class="b-product__title">Минеральное удобрение GHE FloraMicro 500ml</a>
+                                        <span class="b-product__price">1157.07 <span class="b-product__curr">грн</span></span>
+                                        <button type="button" class="b-product__btn">Заказать</button>
+                                    </figcaption>
+                                </figure>
+                            </li>
+                        </ul>
+                        <!--/PRODUCTS LIST END-->
+
+                        <!--MORE BUTTON START-->
+                        <div class="row">
+                            <div class="col-sm-6 col-sm-offset-3">
+                                <button type="button" class="g-btn g-full-width" id="load">Показать еще</button>
+                            </div>
+                        </div>
+                        <!--/MORE BUTTON END-->
+
+                        <!--PAGINATION START-->
+                        <div class="b-pagination">
+                            <a href="#" class="b-pagination__item b-pagination__item--prev"><i class="icon-left-open-big"></i></a>
+                            <a href="#" class="b-pagination__item">1</a>
+                            <span class="b-pagination__item current">2</span>
+                            <a href="#" class="b-pagination__item">3</a>
+                            <a href="#" class="b-pagination__item b-pagination__item--next"><i class="icon-right-open-big"></i></a>
+                        </div>
+                        <!--/PAGINATION END-->
+
                     </div>
+                    <!--/RIGHT COLUMN END-->
                 </div><!--/row-->
             </section>
             <!--/PAGE CONTENT END-->
 
             <div class="page__section">
                 <span class="g-title">Мы рекомендуем</span>
-                <span class="g-subtitle">В этой строке мы пишем какой-то текст и <a href="shop.html">переходим в магазин</a></span>
+                <span class="g-subtitle">В этой строке мы пишем какой-то текст, но никуда не переходим - мы уже в магазине</span>
 
                 <!--PRODUCT SLIDER START-->
                 <div class="product-slider">
@@ -387,5 +560,39 @@
     <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\/script>')</script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/app.min.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {//пример как показать лоадер во время загрузки
+            var overlay = document.getElementById('overlay'),
+                button = document.getElementById('example'),
+                className = 'overlay--light',
+                method = {};
+
+            method.showLoader = function () {
+                overlay.innerHTML = '<span class="loader"></span>';
+                if (overlay.classList)
+                    overlay.classList.add(className);
+                else
+                    overlay.className += ' ' + className;
+
+                overlay.style.display = 'block';
+            };
+
+            method.hideLoader = function () {
+                overlay.innerHTML = '';
+                if (overlay.classList)
+                    overlay.classList.remove(className);
+                else
+                    overlay.className = overlay.className.replace(new RegExp('(^|\\b)' + className.split(' ').join('|') + '(\\b|$)', 'gi'), ' ');
+                overlay.style.display = 'none';
+            };
+
+            button.addEventListener('click', function () {
+                method.showLoader();
+                setTimeout(method.hideLoader, 1000);
+            });
+        });
+    </script>
+
 </body>
 </html>

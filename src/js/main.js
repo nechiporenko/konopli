@@ -13,6 +13,7 @@
 // Подключаем Zoom
 // Стилизуем загрузчики файлов
 // Поиск в каталоге магазина
+// Стилизация Select
 
 jQuery(document).ready(function ($) {
     //Кэшируем
@@ -441,4 +442,20 @@ jQuery(document).ready(function ($) {
             suggest(matches);
         }
     });
+
+    //
+    // Стилизация Select
+    //---------------------------------------------------------------------------------------
+    function stylingSelect() {
+        var $select = $('.js-select');
+        $select.each(function () {
+            $(this).selectric({
+                disableOnMobile: false,
+                //openOnHover: true,
+                responsive: true
+            });
+        });
+    }
+    if ($('.js-select').length) { stylingSelect(); }
+
 });

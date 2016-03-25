@@ -93,7 +93,6 @@
 /*/*Bootstrap style overhead*/
 .btn{
     padding:7px 12px;//36px
-    outline:0;
     border-radius:0;
 }
 
@@ -109,6 +108,7 @@
         color:#fff;
         background-color:$primary;
         border-color:$primary;
+        outline:0;
   }
 }
 
@@ -123,6 +123,7 @@
       color:#fff;
       background-color:lighten($primary, 10%);
       border-color:lighten($primary, 10%);
+      outline:0;
   }
 }
 

@@ -76,6 +76,9 @@ textarea {
 
 
 /*Bootstrap style overhead*/
+.input-group{
+    @include px2rem(margin-bottom, 2*$project-line-height);
+}
 .form-control{
     height: 34px;
     @include px2rem(margin-bottom, 2*$project-line-height);
@@ -113,6 +116,45 @@ textarea {
         box-shadow:inset 0 0 4px rgba($border-color, .6);
     }
 }
+
+
+/*Custom checkboxes */
+input[type=checkbox].css-checkbox{
+	position:absolute; z-index:-1000; left:-1000px; overflow: hidden; clip: rect(0 0 0 0); height:1px; width:1px; margin:-1px; padding:0; border:0;
+}
+
+input[type=checkbox].css-checkbox + label.css-label {
+	padding-left:46px;
+	display:inline-block;
+    @include px2rem(line-height, 26px);
+    background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAaAgMAAADUJKRdAAAACVBMVEXMzMz////MzMxmqa1XAAAAAXRSTlOWWYruFwAAABhJREFUCNdj0FoFAg0MU0NBIGHI0lB/AADQmEbJjMUIKwAAAABJRU5ErkJggg==) left top no-repeat;
+	vertical-align:middle;
+	cursor:pointer;
+    @include transition(all .1s ease-in);
+
+    &:hover{
+        color:$title-color;
+    }
+}
+
+input[type=checkbox].css-checkbox:checked + label.css-label,
+label.css-label {
+    background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAaCAMAAACelLz8AAAAb1BMVEU6qjX///86qjU9rDj2/PbD5cJjvF9Drz79/v36/frx+fHp9unf8d7Y7tei16CU0ZF3xHNqv2ZVtlFPs0pJsUXk8+Pj8+LR69DK6Mi84rq44Laz3rGu3Kyo2qae1ZuX0pSIzIWCyX99x3pvwWxauFaeuN23AAAAAXRSTlOWWYruFwAAAHtJREFUKM/NkscOhVAIRHVus/dX7PX/v1FjXFi4upUNISeBYcAwoImFmJrAi5HVhxpkR2hpxEcEdEMnRkXPciQr9jKCztqIOzFxUBhisNfym6j/SXyDiC/JS9XvsleNmJt+lvnEyiWTQqUe6UbOkHw0Rgnpvutez+jmRWeV3QZQ+AUqQAAAAABJRU5ErkJggg==) left top no-repeat;
+    color:$primary;
+}
+
+
+label.css-label{
+    display:inline-block;
+    margin-bottom:0;
+    -webkit-touch-callout: none;
+    @include user-select(none);
+    font-family:$font-light;
+    font-weight:300;
+    color:$text-color;
+    @include font-size(14px);
+}
+
 
 
 

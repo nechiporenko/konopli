@@ -12,6 +12,20 @@
     filter: alpha(opacity=50);
     z-index:1800; //под хидером, подпанелью моб.меню
     display:none; //покажем скриптом
+
+    .loader{
+        @include size(32px);
+        position:absolute;
+        top:50%;
+        left:50%;
+        margin-top:-16px;
+        margin-left:-16px;
+        background:url(../img/loader.gif) no-repeat;
+    }
+}
+
+.overlay--light{
+    background:#fff;
 }
 
 
