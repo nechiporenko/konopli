@@ -14,6 +14,7 @@
 // Стилизуем загрузчики файлов
 // Поиск в каталоге магазина
 // Стилизация Select
+// Стилизация поля кол-ва товаров
 
 jQuery(document).ready(function ($) {
     //Кэшируем
@@ -458,4 +459,19 @@ jQuery(document).ready(function ($) {
     }
     if ($('.js-select').length) { stylingSelect(); }
 
+
+    //
+    // Стилизация поля кол-ва товаров
+    //---------------------------------------------------------------------------------------
+    function initTouchSpin() {
+        $('.js-stepper').TouchSpin({
+            min: 1,
+            max: 9999,
+            step: 1,
+        });
+
+        $('.bootstrap-touchspin-down').html('<i class="icon-minus"><i>');
+        $('.bootstrap-touchspin-up').html('<i class="icon-plus"><i>');
+    }
+    if ($('.js-stepper').length) { initTouchSpin();}
 });

@@ -90,6 +90,19 @@
 }
 
 
+.g-btn--has-icon{
+    [class^="icomoon-"], [class*=" icomoon-"]{
+        @include font-size(18px);
+        vertical-align:middle;
+    }
+
+    [class^="icon-"]:before, [class*=" icon-"]:before{
+        @include font-size(18px);
+        vertical-align:middle;
+    }
+}
+
+
 /*/*Bootstrap style overhead*/
 .btn{
     padding:7px 12px;//36px
@@ -98,7 +111,7 @@
 
 
 .btn-default {
-  color: $text-color;
+  color: $primary;
   background-color: #fff;
   border-color: $border-color;
 

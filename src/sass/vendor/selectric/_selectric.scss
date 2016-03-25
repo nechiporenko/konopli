@@ -112,7 +112,6 @@
   height: 1px !important;
   outline: none !important;
   border: none !important;
-  *font: 0/0 a !important;
   background: none !important;
 }
 
@@ -129,7 +128,7 @@
   top: 100%;
   left: 0;
   background: #fff;
-  border: 1px solid #eee;
+  border: 1px solid $border-color;
   z-index: -1;
   //box-shadow: 0 0 10px -6px;
 }
@@ -153,7 +152,7 @@
   display: block;
   padding: 8px;
   border-top: 1px solid #F8F8F8;
-  border-bottom: 1px solid #EEE;
+  border-bottom: 1px solid $border-color;
   color: $text-color;
   cursor: pointer;
 }
