@@ -83,6 +83,18 @@
       "css": "minus",
       "code": 59404,
       "src": "entypo"
+    },
+    {
+      "uid": "3bd18d47a12b8709e9f4fe9ead4f7518",
+      "css": "arrows-ccw",
+      "code": 59405,
+      "src": "entypo"
+    },
+    {
+      "uid": "c709da589c923ba3c2ad48d9fc563e93",
+      "css": "cancel",
+      "code": 59406,
+      "src": "entypo"
     }
   ]
 }

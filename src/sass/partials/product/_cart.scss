@@ -1,0 +1,118 @@
+﻿@import "../../modules/_base.scss";
+/*Product Cart table*/
+
+@media screen and (max-width: 767px) {
+    .table-responsive{
+        border:1px dashed #f2f2f2;
+    }
+}
+
+.b-cart-table{
+    @extend .g-full-width;
+
+    tr td{
+        padding:0 5px 40px;
+
+        &.text-center{
+            text-align:center;
+        }
+
+        &.text-right{
+            text-align:right;
+        }
+
+        &:first-child{
+            width:80px;
+
+            @include media($tablet){
+                width:150px;
+                padding-left:0;
+            }
+        }
+        &:last-child{
+            @include media($tablet){
+                padding-right:0;
+            }
+        }
+    }
+
+    .b-price{
+        margin-bottom:0;
+    }
+
+    tfoot tr td{
+        padding-top:40px;
+        border-top:1px solid $border-color;
+
+        @include media($tablet){
+            text-align:right;
+        }
+    }
+}
+
+.b-cart-table__thumb{
+    border:1px solid $border-color;
+    margin:0;
+    width:70px;
+
+    @include media($tablet){
+        width:140px;
+    }
+}
+.b-cart-table__link{
+    display:block;
+    position:relative;
+
+    &:after{
+        content:'';
+        display:block;
+        padding-top:100%;
+    }
+}
+
+.b-cart-table__img{
+    @extend .g-img-centered;
+    max-width:98%;
+    max-height:98%;
+}
+
+.b-cart-table__title{
+    @extend .g-title;
+    @extend .g-title--alt;
+}
+
+.b-cart-table__stepper{
+    display:inline-block;
+    width:140px;
+
+    .input-group{
+        margin-bottom:0;
+    }
+}
+
+.b-cart-table__action{
+    white-space:nowrap;
+}
+
+.b-cart-table__btn{
+    padding:0;
+    background:none;
+    @include size(30px);
+    border:1px solid $border-color;
+    line-height:30px;
+    color:$border-color;
+    text-align:center;
+    border-radius:50%;
+    @include font-size(16px);
+
+    &:hover,
+    &:focus{
+        color:$primary;
+        border-color:$primary;
+        outline:0;
+    }
+    &:active{
+        color:#fff;
+        background:$primary;
+    }
+}
