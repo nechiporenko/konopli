@@ -19,7 +19,7 @@
     @include transform(translateZ(0));
     @include backface-visibility(hidden);
     position:relative;
-    @include transition-property(color);
+    @include transition-property(color, border-color, transform);
     @include transition-duration(.3s);
 
 
@@ -49,6 +49,10 @@
             @include transform(scaleX(1));
             @include transition-timing-function(cubic-bezier(0.52, 1.64, 0.37, 0.66));
         }
+    }
+
+    &:active{
+        @include transform(translateY(4px));
     }
 }
 
