@@ -3,7 +3,7 @@
 /*Site Logo*/
 .header__logo{
     float:left;
-    @include px2rem(width, 138px);
+    @include px2rem(width, 132px);
     @include px2rem(height, 44px);
     @include hide-text;
     background-image:url(../img/logo.png);
