@@ -30,7 +30,8 @@ html{
     color: $text-color;
 
     @include media($desktop){
-        padding-top:54px; //fixed header height
+        //padding-top:54px; //fixed header height
+        padding-top:72px;
     }
 }
 

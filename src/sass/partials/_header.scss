@@ -19,6 +19,11 @@
     position:relative;
     background:#fff;
     z-index:2000;
+
+    @include media($desktop){
+        //padding:5px 0;
+        padding:14px 0;
+    }
 }
 
 @import "header/_logo.scss";
