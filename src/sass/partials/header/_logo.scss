@@ -3,18 +3,26 @@
 /*Site Logo*/
 .header__logo{
     float:left;
-    @include px2rem(width, 132px);
-    @include px2rem(height, 44px);
+    width:rem(138px);
+    height:rem(44px);
+
     @include hide-text;
     background-image:url(../img/logo.png);
     background-repeat:no-repeat;
+    background-size:100% 100%;
 
     @include hidpi(1.5){
         background-image:url(../img/logo2x.png);
-        background-size:100% 100%;
     }
 
     @include media($desktop){
         @include transform(translateY(-7px));
+        @include px2rem(width, 150px);
+        @include px2rem(height, 48px);
+        background-size:unset;
+
+        @include hidpi(1.5){
+            background-size:100% 100%;
+        }
     }
 }
